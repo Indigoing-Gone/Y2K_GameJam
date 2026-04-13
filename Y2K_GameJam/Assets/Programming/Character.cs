@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private List<ClothingItem> testClothingItems = new();
+    [SerializeField] private List<ClothingData> testClothingItems = new();
 
     [SerializeField] private string characterName;
     private Equipment equipment = new();
@@ -12,17 +12,18 @@ public class Character : MonoBehaviour
 
     void Awake()
     {
-        equipment.OnEquipmentChanged += OnEquipmentChanged;
+        StepController.OnStepTaken += () => equipment.TakeStep();
     }
 
     void Start()
     {
-        foreach (ClothingItem item in testClothingItems) equipment.Equip(item);
+        foreach (ClothingData item in testClothingItems)
+        {
+            ClothingItem clothingItem = new(item);
+            equipment.Equip(clothingItem);
+        }
+        
         equipment.DisplayEquipment();
     }
 
-    private void OnEquipmentChanged(ClothingItem _oldItem, ClothingItem _newItem)
-    {
-        
-    }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Equipment
 {
     public event Action<ClothingItem, ClothingItem> OnEquipmentChanged;
+
     private Dictionary<ClothingSlot, ClothingItem> equippedClothing = new();
 
     public Equipment()
@@ -18,7 +19,7 @@ public class Equipment
 
     public void Equip(ClothingItem _newItem)
     {
-        ClothingSlot _slot = _newItem.Slot;
+        ClothingSlot _slot = _newItem.Data.Slot;
         ClothingItem _oldItem = null;
 
         if (equippedClothing.ContainsKey(_slot)) _oldItem = equippedClothing[_slot];
@@ -38,11 +39,21 @@ public class Equipment
         OnEquipmentChanged?.Invoke(oldItem, null);
     }
 
+    public void TakeStep()
+    {
+        foreach (KeyValuePair<ClothingSlot, ClothingItem> _entry in equippedClothing)
+        {
+            if (_entry.Value == null) continue;
+            ClothingItem _item = _entry.Value;
+            _item.TakeStep();
+        }
+    }
+
     public void DisplayEquipment()
     {
         foreach (KeyValuePair<ClothingSlot, ClothingItem> _entry in equippedClothing)
         {
-            if (_entry.Value != null) Debug.Log($"Equipped {_entry.Value.Name} in slot {_entry.Key}");
+            if (_entry.Value != null) Debug.Log($"Equipped {_entry.Value.Data.Name} in slot {_entry.Key}");
             else Debug.Log($"No item equipped in slot {_entry.Key}");
         }
     }

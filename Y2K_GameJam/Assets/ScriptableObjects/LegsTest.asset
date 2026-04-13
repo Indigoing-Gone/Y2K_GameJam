@@ -15,6 +15,5 @@ MonoBehaviour:
   itemName: Basic Pants
   description: 
   slot: 3
-  steps: 3
-  isDebuffed: 0
+  steps: 2
   image: {fileID: 0}
