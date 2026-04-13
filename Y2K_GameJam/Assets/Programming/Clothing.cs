@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum ClothingType
+public enum ClothingSlot
 {
     Default,
     Head,
@@ -16,7 +16,7 @@ public class ClothingItem : ScriptableObject
     [SerializeField] private string itemName;
     [SerializeField] private string description;
 
-    [SerializeField] private ClothingType type;
+    [SerializeField] private ClothingSlot slot;
     [SerializeField] private int steps;
     [SerializeField] private bool isDebuffed;
 
@@ -27,7 +27,7 @@ public class ClothingItem : ScriptableObject
     public string Name => itemName;
     public string Description => description;
 
-    public ClothingType Type => type;
+    public ClothingSlot Slot => slot;
     public int Steps => steps;
     public bool IsDebuffed => isDebuffed;
 
