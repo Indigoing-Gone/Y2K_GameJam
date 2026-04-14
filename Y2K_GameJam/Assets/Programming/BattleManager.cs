@@ -32,11 +32,14 @@ public class BattleManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         foreach (Character _character in characterOrder) _character.TakeStep();
 
+        List<Character> _heroesReordered = new(heroes);
+        _heroesReordered.Reverse();
+
         foreach (Character _character in characterOrder)
         {
             yield return new WaitForSeconds(1f);
             Debug.Log($"Processing ready clothing for {_character.name}");
-            _character.ProcessReadyClothing((heroes, monsters));
+            _character.ProcessReadyClothing((_heroesReordered, monsters));
         }
 
         StartCoroutine(Step());

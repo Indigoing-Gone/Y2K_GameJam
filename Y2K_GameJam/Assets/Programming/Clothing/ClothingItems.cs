@@ -20,7 +20,7 @@ public class ClothingData : ScriptableObject
     [field: SerializeField] public ClothingSlot Slot { get; private set; }
     [field: SerializeField] public int Steps { get; private set; }
 
-    [SerializeField] public List<ScriptableObject> Effects;
+    [SerializeField] private List<ClothingEffect> Effects;
 
     [field: SerializeField] public Sprite Sprite { get; private set; }
 

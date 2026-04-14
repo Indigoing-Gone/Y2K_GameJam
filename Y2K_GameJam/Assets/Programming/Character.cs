@@ -64,11 +64,23 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int _damage) => characterData.UpdateHealth(-_damage);
 }
 
 [Serializable]
 public class CharacterData
 {
     [field: SerializeField] public string Name { get; private set; }
-    [field: SerializeField] public string Health { get; private set; }
+    [field: SerializeField] public int Health { get; private set; }
+
+    public CharacterData(string _name, int _health)
+    {
+        Name = _name;
+        Health = _health;
+    }
+
+    public void UpdateHealth(int _amount)
+    {
+        Health += _amount;
+    }
 }

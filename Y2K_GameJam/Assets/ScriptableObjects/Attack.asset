@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Attack
   m_EditorClassIdentifier: Assembly-CSharp::AttackEffect
+  <Name>k__BackingField: Test Attack
+  <Description>k__BackingField: 
+  <TargetType>k__BackingField: 2
+  <TargetPosition>k__BackingField: 0
+  <Damage>k__BackingField: 5
