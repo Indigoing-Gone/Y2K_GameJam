@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
   m_Name: LegsTest
   m_EditorClassIdentifier: Assembly-CSharp::Clothing
-  itemName: Basic Pants
-  description: 
-  slot: 3
-  steps: 2
-  image: {fileID: 0}
+  <Name>k__BackingField: Basic Pants
+  <Description>k__BackingField: 
+  <Slot>k__BackingField: 3
+  <Steps>k__BackingField: 3
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 19d3f52541a926d1994fbef3752215c5, type: 3}

@@ -3,27 +3,40 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private List<ClothingData> testClothingItems = new();
+    [SerializeField] private List<ClothingData> testClothingItems;
 
     [SerializeField] private string characterName;
-    private Equipment equipment = new();
+    protected EquippedClothing equippedClothing;
 
     public string Name => characterName;
 
-    void Awake()
+    protected virtual void OnEnable()
     {
-        StepController.OnStepTaken += () => equipment.TakeStep();
+        StepController.OnStepTaken += TakeStep;
     }
 
-    void Start()
+    protected virtual void OnDisable()
+    {
+        StepController.OnStepTaken -= TakeStep;
+    }
+
+    protected virtual void Awake()
+    {
+        equippedClothing = new EquippedClothing();
+    }
+
+    protected virtual void Start()
     {
         foreach (ClothingData item in testClothingItems)
         {
             ClothingItem clothingItem = new(item);
-            equipment.Equip(clothingItem);
+            equippedClothing.Equip(clothingItem);
         }
-        
-        equipment.DisplayEquipment();
+    }
+
+    protected virtual void TakeStep()
+    {
+        equippedClothing.TakeStep();
     }
 
 }

@@ -2,14 +2,16 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equipment
+public class EquippedClothing
 {
-    public event Action<ClothingItem, ClothingItem> OnEquipmentChanged;
+    public event Action<ClothingItem> OnEquippedClothingChanged;
 
-    private Dictionary<ClothingSlot, ClothingItem> equippedClothing = new();
+    private Dictionary<ClothingSlot, ClothingItem> equippedClothing;
 
-    public Equipment()
+    public EquippedClothing()
     {
+        equippedClothing = new Dictionary<ClothingSlot, ClothingItem>();
+
         foreach (ClothingSlot _slot in Enum.GetValues(typeof(ClothingSlot)))
         {
             if (_slot == ClothingSlot.Default) continue;
@@ -24,9 +26,8 @@ public class Equipment
 
         if (equippedClothing.ContainsKey(_slot)) _oldItem = equippedClothing[_slot];
 
-
         equippedClothing[_slot] = _newItem;
-        OnEquipmentChanged?.Invoke(_oldItem, _newItem);
+        OnEquippedClothingChanged?.Invoke(_newItem);
     }
 
     public void Unequip(ClothingSlot _slot)
@@ -36,7 +37,7 @@ public class Equipment
         ClothingItem oldItem = equippedClothing[_slot];
         equippedClothing.Remove(_slot);
 
-        OnEquipmentChanged?.Invoke(oldItem, null);
+        OnEquippedClothingChanged?.Invoke(null);
     }
 
     public void TakeStep()
@@ -46,15 +47,6 @@ public class Equipment
             if (_entry.Value == null) continue;
             ClothingItem _item = _entry.Value;
             _item.TakeStep();
-        }
-    }
-
-    public void DisplayEquipment()
-    {
-        foreach (KeyValuePair<ClothingSlot, ClothingItem> _entry in equippedClothing)
-        {
-            if (_entry.Value != null) Debug.Log($"Equipped {_entry.Value.Data.Name} in slot {_entry.Key}");
-            else Debug.Log($"No item equipped in slot {_entry.Key}");
         }
     }
 }

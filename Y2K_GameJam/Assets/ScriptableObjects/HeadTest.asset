@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
   m_Name: HeadTest
   m_EditorClassIdentifier: Assembly-CSharp::Clothing
-  itemName: Basic Hat
-  description: 
-  slot: 1
-  steps: 3
-  isDebuffed: 0
-  image: {fileID: 0}
+  <Name>k__BackingField: Basic Hat
+  <Description>k__BackingField: 
+  <Slot>k__BackingField: 1
+  <Steps>k__BackingField: 2
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 859d821a1175acd17aefe55db70da55b, type: 3}

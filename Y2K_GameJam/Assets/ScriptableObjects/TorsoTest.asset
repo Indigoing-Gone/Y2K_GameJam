@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
   m_Name: TorsoTest
   m_EditorClassIdentifier: Assembly-CSharp::Clothing
-  itemName: Basic Shirt
-  description: 
-  slot: 2
-  steps: 3
-  isDebuffed: 0
-  image: {fileID: 0}
+  <Name>k__BackingField: Basic Shirt
+  <Description>k__BackingField: 
+  <Slot>k__BackingField: 2
+  <Steps>k__BackingField: 4
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 9ff2947fe39b2fef587dfde931d194b4, type: 3}
