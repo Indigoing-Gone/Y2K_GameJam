@@ -1,5 +1,6 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public enum ClothingSlot
 {
@@ -19,11 +20,13 @@ public class ClothingData : ScriptableObject
     [field: SerializeField] public ClothingSlot Slot { get; private set; }
     [field: SerializeField] public int Steps { get; private set; }
 
+    [SerializeField] public List<ScriptableObject> Effects;
+
     [field: SerializeField] public Sprite Sprite { get; private set; }
 
-    public void Activate()
+    public void Activate(Character _originCharacter, (List<Character> _allies, List<Character> _enemies) _characterLists)
     {
-        Debug.Log($"Activating {Name}");
+        foreach (IClothingEffect effect in Effects) effect.ActivateEffect(_originCharacter, _characterLists);
     }
 }
 
@@ -38,11 +41,15 @@ public class ClothingItem
         CurrentSteps = Data.Steps;
     }
 
-    public void TakeStep()
+    public bool HandleStep()
     {
-        CurrentSteps--;
-        if(CurrentSteps > 0) return;
-        Data.Activate();
+        if (CurrentSteps > 0) CurrentSteps--;
+        if (CurrentSteps > 0) return false;
+        return true;
+    }
+
+    public void ResetSteps()
+    {
         CurrentSteps = Data.Steps;
     }
 }

@@ -10,4 +10,9 @@ public class EquippedClothingVisuals : MonoBehaviour
     {
         foreach (EquippedClothingSlotVisuals _slotVisual in slotVisuals) _slotVisual.UpdateVisual(_item);
     }
+
+    public void UpdateSteps()
+    {
+        foreach (EquippedClothingSlotVisuals _slotVisual in slotVisuals) _slotVisual.UpdateSteps();
+    }
 }

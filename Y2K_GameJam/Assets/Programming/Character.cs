@@ -1,31 +1,37 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(EquippedClothingVisuals))]
 public class Character : MonoBehaviour
 {
     [SerializeField] private List<ClothingData> testClothingItems;
 
-    [SerializeField] private string characterName;
-    protected EquippedClothing equippedClothing;
+    [SerializeField] private CharacterData characterData;
+    private EquippedClothing equippedClothing;
+    protected EquippedClothingVisuals equippedClothingVisuals;
 
-    public string Name => characterName;
+    protected List<ClothingItem> readyClothing;
 
-    protected virtual void OnEnable()
+
+    private void OnEnable()
     {
-        StepController.OnStepTaken += TakeStep;
+        equippedClothing.OnEquippedClothingChanged += UpdateVisuals;
     }
 
-    protected virtual void OnDisable()
+    private void OnDisable()
     {
-        StepController.OnStepTaken -= TakeStep;
+        equippedClothing.OnEquippedClothingChanged -= UpdateVisuals;
     }
 
-    protected virtual void Awake()
+    private void Awake()
     {
         equippedClothing = new EquippedClothing();
+        equippedClothingVisuals = GetComponent<EquippedClothingVisuals>();
+        readyClothing = new List<ClothingItem>();
     }
 
-    protected virtual void Start()
+    private void Start()
     {
         foreach (ClothingData item in testClothingItems)
         {
@@ -34,9 +40,35 @@ public class Character : MonoBehaviour
         }
     }
 
-    protected virtual void TakeStep()
+    public void TakeStep()
     {
-        equippedClothing.TakeStep();
+        readyClothing.Clear();
+
+        readyClothing = equippedClothing.TakeStep();
+        equippedClothingVisuals.UpdateSteps();
     }
 
+    private void UpdateVisuals(ClothingItem _item)
+    {
+        equippedClothingVisuals.UpdateVisuals(_item);
+        equippedClothingVisuals.UpdateSteps();
+    }
+
+    public virtual void ProcessReadyClothing((List<Character> _heroes, List<Character> _monsters) _characterLists)
+    {
+        foreach (ClothingItem item in readyClothing)
+        {
+            item.Data.Activate(this, _characterLists);
+            item.ResetSteps();
+            equippedClothingVisuals.UpdateSteps();
+        }
+    }
+
+}
+
+[Serializable]
+public class CharacterData
+{
+    [field: SerializeField] public string Name { get; private set; }
+    [field: SerializeField] public string Health { get; private set; }
 }

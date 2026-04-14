@@ -6,11 +6,11 @@ public class EquippedClothing
 {
     public event Action<ClothingItem> OnEquippedClothingChanged;
 
-    private Dictionary<ClothingSlot, ClothingItem> equippedClothing;
+    private SortedDictionary<ClothingSlot, ClothingItem> equippedClothing;
 
     public EquippedClothing()
     {
-        equippedClothing = new Dictionary<ClothingSlot, ClothingItem>();
+        equippedClothing = new SortedDictionary<ClothingSlot, ClothingItem>();
 
         foreach (ClothingSlot _slot in Enum.GetValues(typeof(ClothingSlot)))
         {
@@ -40,13 +40,16 @@ public class EquippedClothing
         OnEquippedClothingChanged?.Invoke(null);
     }
 
-    public void TakeStep()
+    public List<ClothingItem> TakeStep()
     {
+        List<ClothingItem> _readyItems = new();
         foreach (KeyValuePair<ClothingSlot, ClothingItem> _entry in equippedClothing)
         {
             if (_entry.Value == null) continue;
+
             ClothingItem _item = _entry.Value;
-            _item.TakeStep();
+            if (_item.HandleStep()) _readyItems.Add(_item);
         }
+        return _readyItems;
     }
 }
