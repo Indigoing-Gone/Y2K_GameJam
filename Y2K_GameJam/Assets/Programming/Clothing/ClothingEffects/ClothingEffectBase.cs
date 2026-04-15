@@ -35,7 +35,7 @@ public abstract class ClothingEffect : ScriptableObject, IClothingEffect
 
     public virtual void ActivateEffect(Unit _originUnit, BattleContext _battleContext)
     {
-        Debug.Log($"Activating {Name} from {_originUnit.name}");
+        //Debug.Log($"Activating {Name} from {_originUnit.name}");
 
         List<Unit> targets = GetTargetUnits(_originUnit, _battleContext);
 
