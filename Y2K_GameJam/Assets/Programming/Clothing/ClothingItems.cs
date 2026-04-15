@@ -4,36 +4,50 @@ using UnityEngine;
 
 public enum ClothingSlot
 {
-    Default,
+    None,
     Head,
     Torso,
     Legs,
-    Feet
+    Feet,
+    All
 }
 
-[CreateAssetMenu(fileName = "ClothingItem", menuName = "Scriptable Objects/Clothing Item")]
+[CreateAssetMenu(fileName = "ClothingData", menuName = "Scriptable Objects/Clothing Data")]
 public class ClothingData : ScriptableObject
 {
+    [Header("Clothing Info")]
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public string Description { get; private set; }
-
     [field: SerializeField] public ClothingSlot Slot { get; private set; }
-    [field: SerializeField] public int Steps { get; private set; }
-
-    [SerializeField] private List<ClothingEffect> Effects;
-
     [field: SerializeField] public Sprite Sprite { get; private set; }
 
-    public void Activate(Character _originCharacter, (List<Character> _allies, List<Character> _enemies) _characterLists)
+    [Header("Clothing Stats")]
+    [field: SerializeField] public int Steps { get; private set; }
+    [SerializeReference] private List<ClothingEffect> Effects;
+
+    public void Activate(Unit _originUnit, BattleContext _battleContext)
     {
-        foreach (IClothingEffect effect in Effects) effect.ActivateEffect(_originCharacter, _characterLists);
+        foreach (ClothingEffect effect in Effects) effect.ActivateEffect(_originUnit, _battleContext);
     }
 }
 
 public class ClothingItem
 {
+    public event Action OnStepsUpdated;
+
+    private int currentSteps;
+
     public ClothingData Data { get; private set; }
-    public int CurrentSteps { get; private set; }
+    public int CurrentSteps
+    {
+        get => currentSteps; 
+        private set
+        {
+            currentSteps = value;
+            OnStepsUpdated?.Invoke();
+        }
+    }
+    public bool IsReady => CurrentSteps <= 0;
 
     public ClothingItem(ClothingData _data)
     {
@@ -41,11 +55,10 @@ public class ClothingItem
         CurrentSteps = Data.Steps;
     }
 
-    public bool HandleStep()
+    public void ModifySteps(int _amount)
     {
-        if (CurrentSteps > 0) CurrentSteps--;
-        if (CurrentSteps > 0) return false;
-        return true;
+        CurrentSteps += _amount;
+        if (CurrentSteps < 0) CurrentSteps = 0;
     }
 
     public void ResetSteps()

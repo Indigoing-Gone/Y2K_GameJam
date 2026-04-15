@@ -4,14 +4,62 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utils;
 
+public class ClothingEvent
+{
+    [field: SerializeField] public ClothingItem Item { get; private set; }
+    [field: SerializeField] public Unit Owner { get; private set; }
+
+    public ClothingEvent(Unit _owner, ClothingItem _item)
+    {
+        Owner = _owner;
+        Item = _item;
+    }
+}
+
+public struct ClothingEventPriority : IComparer<ClothingEvent>
+{
+    public int Compare(ClothingEvent x, ClothingEvent y)
+    {
+        //Compare by Owner Index in battle order
+        int result = x.Owner.Data.OrderIndex.CompareTo(y.Owner.Data.OrderIndex);
+        if(result != 0) return result;
+
+        //If same Index, compare by Clothing Slot (to ensure consistent ordering)
+        return x.Item.Data.Slot.CompareTo(y.Item.Data.Slot);
+    }
+}
+
+[Serializable]
+public class BattleContext
+{
+    [field: SerializeField] public List<Unit> Heroes { get; private set; }
+    [field: SerializeField] public List<Unit> Monsters { get; private set; }
+
+    public List<Unit> GetAllies(Unit _unit) => Heroes.Contains(_unit) ? Heroes : Monsters;
+    public List<Unit> GetEnemies(Unit _unit) => Heroes.Contains(_unit) ? Monsters : Heroes;
+
+    public List<Unit> GetFront(List<Unit> _units) => new() { _units[0] };
+    public List<Unit> GetBack(List<Unit> _units) => new() { _units[^1] };
+}
+
 public class BattleManager : MonoBehaviour
 {
     [SerializeField] private float stepInterval;
 
-    [SerializeField] private List<Character> heroes;
-    [SerializeField] private List<Character> monsters;
+    [SerializeField] private BattleContext battleContext;
+    private List<Unit> units;
 
-    private List<Character> characterOrder;
+    private PriorityQueue<ClothingEvent, ClothingEvent> clothingEventQueue;
+
+    void OnEnable()
+    {
+        ModifyStepsEffect.OnModifiedClothingItemReady += EnqueueClothingEvent;
+    }
+
+    void OnDisable()
+    {
+        ModifyStepsEffect.OnModifiedClothingItemReady -= EnqueueClothingEvent;
+    }
 
     private void Start()
     {
@@ -20,28 +68,54 @@ public class BattleManager : MonoBehaviour
 
     private void StartBattle()
     {
-        characterOrder = new List<Character>();
-        characterOrder.AddRange(heroes);
-        characterOrder.AddRange(monsters);
+        units = new List<Unit>();
+        List<Unit> reversedHeroes = new(battleContext.Heroes);
+        reversedHeroes.Reverse();
+        units.AddRange(reversedHeroes);
+        units.AddRange(battleContext.Monsters);
+        UpdateUnitOrder();
 
-        StartCoroutine(Step());
+        clothingEventQueue = new PriorityQueue<ClothingEvent, ClothingEvent>(new ClothingEventPriority());
+
+        StartCoroutine(Step(units));
     }
 
-    private IEnumerator Step()
+    private void UpdateUnitOrder()
+    {
+        for (int i = 0; i < units.Count; i++) units[i].Data.UpdateOrderIndex(i);
+    }
+
+    private void EnqueueClothingEvent(Unit _unit, ClothingItem _item)
+    {
+        ClothingEvent clothingEvent = new(_unit, _item);
+        clothingEventQueue.Enqueue(clothingEvent, clothingEvent);
+    }
+
+    private IEnumerator Step(List<Unit> _units)
     {
         yield return new WaitForSeconds(2f);
-        foreach (Character _character in characterOrder) _character.TakeStep();
 
-        List<Character> _heroesReordered = new(heroes);
-        _heroesReordered.Reverse();
-
-        foreach (Character _character in characterOrder)
+        //Get ready clothing items from each unit and enqueue corresponding clothing events
+        foreach (Unit _unit in _units)
         {
-            yield return new WaitForSeconds(1f);
-            Debug.Log($"Processing ready clothing for {_character.name}");
-            _character.ProcessReadyClothing((_heroesReordered, monsters));
+            List<ClothingItem> readyClothingItems = _unit.StepEquipment();
+            foreach (ClothingItem _item in readyClothingItems) EnqueueClothingEvent(_unit, _item);
         }
 
-        StartCoroutine(Step());
+        //Process clothing events
+        while (clothingEventQueue.Count > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            ClothingEvent _clothingEvent = clothingEventQueue.Dequeue();
+            Unit _unit = _clothingEvent.Owner;
+            ClothingItem _item = _clothingEvent.Item;
+
+            if (_unit.Data.IsDead || !_item.IsReady) continue;
+
+            _item.Data.Activate(_unit, battleContext);
+            _item.ResetSteps();
+        }
+
+        StartCoroutine(Step(_units));
     }
 }

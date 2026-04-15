@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class EquippedClothingSlotVisuals : MonoBehaviour
+public class EquipmentSlotVisuals : MonoBehaviour
 {
     [Header("Clothing Info")]
     [SerializeField] private ClothingSlot clothingSlot;
@@ -23,6 +23,9 @@ public class EquippedClothingSlotVisuals : MonoBehaviour
         if (_item.Data.Slot != clothingSlot) return;
         if (_item == null)
         {
+            clothingItem.OnStepsUpdated -= UpdateSteps;
+            UpdateSteps();
+
             clothingItem = null;
             clothingRenderer.sprite = null;
             stepsText.text = "-";
@@ -32,6 +35,9 @@ public class EquippedClothingSlotVisuals : MonoBehaviour
         
 
         clothingItem = _item;
+        clothingItem.OnStepsUpdated += UpdateSteps;
+        UpdateSteps();
+        
         clothingRenderer.sprite = _item.Data.Sprite;
     }
 

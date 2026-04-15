@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 3e0bcc31eac7506729c1805f845f9d20, type: 3}
   m_Name: Attack
   m_EditorClassIdentifier: Assembly-CSharp::AttackEffect
-  <Name>k__BackingField: Test Attack
+  <Name>k__BackingField: 
   <Description>k__BackingField: 
-  <TargetType>k__BackingField: 2
+  <TargetType>k__BackingField: 0
   <TargetPosition>k__BackingField: 0
+  <TargetSlot>k__BackingField: 0
   <Damage>k__BackingField: 5
