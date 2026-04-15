@@ -237,6 +237,7 @@ MonoBehaviour:
     <Name>k__BackingField: 
     <OrderIndex>k__BackingField: 0
     <Health>k__BackingField: 100
+    <AttackModifier>k__BackingField: 0
 --- !u!114 &77759624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +391,7 @@ MonoBehaviour:
     <Name>k__BackingField: 
     <OrderIndex>k__BackingField: 0
     <Health>k__BackingField: 100
+    <AttackModifier>k__BackingField: 0
 --- !u!212 &225486274
 SpriteRenderer:
   serializedVersion: 2
@@ -691,7 +693,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
+  m_CursorLockBehavior: 1
   m_ScrollDeltaPerTick: 6
 --- !u!114 &928350742
 MonoBehaviour:
@@ -780,6 +782,7 @@ MonoBehaviour:
     <Name>k__BackingField: 
     <OrderIndex>k__BackingField: 0
     <Health>k__BackingField: 100
+    <AttackModifier>k__BackingField: 0
 --- !u!212 &975821557
 SpriteRenderer:
   serializedVersion: 2
