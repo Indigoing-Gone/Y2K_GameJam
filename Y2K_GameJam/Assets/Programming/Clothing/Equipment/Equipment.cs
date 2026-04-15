@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Equipment
 {
@@ -24,9 +23,14 @@ public class Equipment
         ClothingSlot _slot = _newItem.Data.Slot;
         ClothingItem _oldItem = null;
 
-        if (equipment.ContainsKey(_slot)) _oldItem = equipment[_slot];
+        if (equipment.ContainsKey(_slot))
+        {
+            _oldItem = equipment[_slot];
+            _oldItem?.SetEquipped(false);
+        }
 
         equipment[_slot] = _newItem;
+        _newItem.SetEquipped(true);
         OnEquipmentChanged?.Invoke(_newItem);
     }
 
@@ -35,18 +39,15 @@ public class Equipment
         if (!equipment.ContainsKey(_slot)) return;
 
         ClothingItem oldItem = equipment[_slot];
+        oldItem?.SetEquipped(false);
         equipment[_slot] = null;
 
         OnEquipmentChanged?.Invoke(null);
     }
 
-    public ClothingItem EquippedItemInSlot(ClothingSlot slot)
-    {
-        if (!equipment.ContainsKey(slot)) return null;
-        return equipment[slot];
-    }
+    public ClothingItem EquipmentInSlot(ClothingSlot slot) => equipment.ContainsKey(slot) ? equipment[slot] : null;
 
-    public List<ClothingItem> AllEquippedItems()
+    public List<ClothingItem> AllEquipment()
     {
         List<ClothingItem> _equipment = new();
         foreach (KeyValuePair<ClothingSlot, ClothingItem> _entry in equipment)

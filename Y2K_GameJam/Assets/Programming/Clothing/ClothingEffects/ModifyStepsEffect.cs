@@ -10,7 +10,7 @@ public class ModifyStepsEffect : ClothingEffect
 
     protected override void ApplyEffect(Unit _originUnit, Unit _targetUnit)
     {
-        ClothingItem _targetItem = _targetUnit.EquippedItemInSlot(TargetSlot);
+        ClothingItem _targetItem = _targetUnit.EquipmentInSlot(TargetSlot);
         if (_targetItem == null) return;
 
         for (int i = 0; i < Math.Abs(StepModification); i++)

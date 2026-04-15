@@ -20,10 +20,10 @@ public class EquipmentSlotVisuals : MonoBehaviour
 
     public void UpdateVisual(ClothingItem _item)
     {
-        if (_item.Data.Slot != clothingSlot) return;
         if (_item == null)
         {
-            clothingItem.OnStepsUpdated -= UpdateSteps;
+            if (clothingItem != null) clothingItem.OnStepsUpdated -= UpdateSteps;
+
             UpdateSteps();
 
             clothingItem = null;
@@ -33,6 +33,8 @@ public class EquipmentSlotVisuals : MonoBehaviour
             return;
         }
         
+        if (_item.Data.Slot != clothingSlot) return;
+        
 
         clothingItem = _item;
         clothingItem.OnStepsUpdated += UpdateSteps;
@@ -41,7 +43,7 @@ public class EquipmentSlotVisuals : MonoBehaviour
         clothingRenderer.sprite = _item.Data.Sprite;
     }
 
-    public void UpdateSteps()
+    private void UpdateSteps()
     {
         if (clothingItem == null) return;
         stepsText.text = clothingItem.CurrentSteps.ToString();

@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(EquipmentVisuals))]
 public class Unit : MonoBehaviour
 {
-    [SerializeField] private List<ClothingData> testClothingItems;
-
     [Header("Components")]
     [field: SerializeField] public UnitData Data { get; private set; }
     private Equipment equipment;
@@ -22,7 +20,7 @@ public class Unit : MonoBehaviour
         equipment.OnEquipmentChanged -= UpdateVisuals;
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         equipment = new Equipment();
         equipmentVisuals = GetComponent<EquipmentVisuals>();
@@ -30,11 +28,7 @@ public class Unit : MonoBehaviour
 
     private void Start()
     {
-        foreach (ClothingData item in testClothingItems)
-        {
-            ClothingItem clothingItem = new(item);
-            equipment.Equip(clothingItem);
-        }
+        UpdateVisuals(null);
     }
 
     private void UpdateVisuals(ClothingItem _item)
@@ -48,8 +42,10 @@ public class Unit : MonoBehaviour
         return readyClothingItems;
     }
 
-    public ClothingItem EquippedItemInSlot(ClothingSlot _slot) => equipment.EquippedItemInSlot(_slot);
-    public List<ClothingItem> AllEquippedItems() => equipment.AllEquippedItems();
+    public void Equip(ClothingItem _item) => equipment.Equip(_item);
+    public void Unequip(ClothingSlot _slot) => equipment.Unequip(_slot);
+    public ClothingItem EquipmentInSlot(ClothingSlot _slot) => equipment.EquipmentInSlot(_slot);
+    public List<ClothingItem> AllEquipment() => equipment.AllEquipment();
 }
 
 [Serializable]

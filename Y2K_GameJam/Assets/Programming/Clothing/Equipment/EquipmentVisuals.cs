@@ -11,8 +11,8 @@ public class EquipmentVisuals : MonoBehaviour
         foreach (EquipmentSlotVisuals _slotVisual in slotVisuals) _slotVisual.UpdateVisual(_item);
     }
 
-    public void UpdateSteps()
-    {
-        foreach (EquipmentSlotVisuals _slotVisual in slotVisuals) _slotVisual.UpdateSteps();
-    }
+    // public void UpdateSteps()
+    // {
+    //     foreach (EquipmentSlotVisuals _slotVisual in slotVisuals) _slotVisual.UpdateSteps();
+    // }
 }

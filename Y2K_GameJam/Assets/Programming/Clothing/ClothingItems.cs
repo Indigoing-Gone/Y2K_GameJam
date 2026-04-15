@@ -47,12 +47,15 @@ public class ClothingItem
             OnStepsUpdated?.Invoke();
         }
     }
+
+    public bool IsEquipped { get; private set; }
     public bool IsReady => CurrentSteps <= 0;
 
     public ClothingItem(ClothingData _data)
     {
         Data = _data;
         CurrentSteps = Data.Steps;
+        IsEquipped = false;
     }
 
     public void ModifySteps(int _amount)
@@ -61,8 +64,6 @@ public class ClothingItem
         if (CurrentSteps < 0) CurrentSteps = 0;
     }
 
-    public void ResetSteps()
-    {
-        CurrentSteps = Data.Steps;
-    }
+    public void ResetSteps() => CurrentSteps = Data.Steps;
+    public void SetEquipped(bool _equipped) => IsEquipped = _equipped;
 }

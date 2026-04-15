@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
-  m_Name: HeadTest
+  m_Name: HeadTest 2
   m_EditorClassIdentifier: Assembly-CSharp::Clothing
-  <Name>k__BackingField: Basic Hat 1
+  <Name>k__BackingField: Basic Hat 3
   <Description>k__BackingField: 
   <Slot>k__BackingField: 1
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 859d821a1175acd17aefe55db70da55b, type: 3}
-  <Steps>k__BackingField: 2
+  <Sprite>k__BackingField: {fileID: 6423877029817948959, guid: 3da4ed937c7ee8307a59ec3316677a04, type: 3}
+  <Steps>k__BackingField: 1
   Effects: []

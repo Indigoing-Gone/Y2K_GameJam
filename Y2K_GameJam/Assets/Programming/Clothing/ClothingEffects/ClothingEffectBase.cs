@@ -66,8 +66,8 @@ public abstract class ClothingEffect : ScriptableObject, IClothingEffect
         
         if (TargetSlot != ClothingSlot.None)
         {
-            if (TargetSlot == ClothingSlot.All) targetList = targetList.Where(target => target.AllEquippedItems().Count > 0).ToList();
-            targetList = targetList.Where(target => target.EquippedItemInSlot(TargetSlot) != null).ToList();
+            if (TargetSlot == ClothingSlot.All) targetList = targetList.Where(target => target.AllEquipment().Count > 0).ToList();
+            targetList = targetList.Where(target => target.EquipmentInSlot(TargetSlot) != null).ToList();
         }
 
         return targetList;
