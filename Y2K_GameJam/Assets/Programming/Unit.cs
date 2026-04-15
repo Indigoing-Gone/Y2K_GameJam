@@ -61,7 +61,7 @@ public class UnitData
     [field: SerializeField] public int Health { get; private set; }
     public bool IsDead { get { return Health <= 0; } }
 
-    [field: SerializeField] public float AttackModifier { get; private set; }
+    [field: SerializeField] public float AttackMultiplier { get; private set; }
 
     public UnitData(string _name = "Unit", int _index = -1, int _health = 100)
     {
@@ -70,7 +70,7 @@ public class UnitData
 
         Health = _health;
         
-        AttackModifier = 1.0f;
+        AttackMultiplier = 1.0f;
     }
 
     public void UpdateOrderIndex(int _index) => OrderIndex = _index;
