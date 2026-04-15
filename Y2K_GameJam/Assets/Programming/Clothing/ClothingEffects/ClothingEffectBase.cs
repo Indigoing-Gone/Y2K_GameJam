@@ -42,7 +42,7 @@ public abstract class ClothingEffect : ScriptableObject, IClothingEffect
         foreach (Unit target in targets)
         {
             if (target == null) continue;
-            ApplyEffect(target);
+            ApplyEffect(_originUnit, target);
         }
     }
 
@@ -73,8 +73,5 @@ public abstract class ClothingEffect : ScriptableObject, IClothingEffect
         return targetList;
     }
 
-    protected virtual void ApplyEffect(Unit _targetUnit)
-    {
-        Debug.Log($"Applying {Name} to {_targetUnit.name}");
-    }
+    protected abstract void ApplyEffect(Unit _originUnit, Unit _targetUnit);
 }

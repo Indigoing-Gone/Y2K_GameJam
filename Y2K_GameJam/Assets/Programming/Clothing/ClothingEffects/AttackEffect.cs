@@ -6,8 +6,9 @@ public class AttackEffect : ClothingEffect
     [Header("Attack Info")]
     [field: SerializeField] public int Damage { get; private set; }
 
-    protected override void ApplyEffect(Unit _targetUnit)
+    protected override void ApplyEffect(Unit _originUnit, Unit _targetUnit)
     {
-        _targetUnit.Data.TakeDamage(Damage);
+        int _finalDamage = Mathf.RoundToInt(Damage * _originUnit.Data.AttackModifier);
+        _targetUnit.Data.TakeDamage(_finalDamage);
     }
 }

@@ -8,7 +8,7 @@ public class ModifyStepsEffect : ClothingEffect
 
     [field: SerializeField] public int StepModification { get; private set; }
 
-    protected override void ApplyEffect(Unit _targetUnit)
+    protected override void ApplyEffect(Unit _originUnit, Unit _targetUnit)
     {
         ClothingItem _targetItem = _targetUnit.EquippedItemInSlot(TargetSlot);
         if (_targetItem == null) return;
