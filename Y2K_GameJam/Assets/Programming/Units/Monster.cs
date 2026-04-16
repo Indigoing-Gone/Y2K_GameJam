@@ -4,6 +4,13 @@ using UnityEngine;
 public class Monster : Unit
 {
     [SerializeField] private List<ClothingData> clothingData;
+    [field: SerializeField] public float Width { get; private set; }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        Width = GetComponent<SpriteRenderer>().bounds.size.x;
+    }
 
     private void Start()
     {
@@ -12,5 +19,10 @@ public class Monster : Unit
             ClothingItem _item = new(_data);
             Equip(_item);
         }
+    }
+
+    override protected void HandleDeath(UnitData data)
+    {
+        Destroy(gameObject);
     }
 }

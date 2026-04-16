@@ -25,9 +25,9 @@ public class ClothingData : ScriptableObject
     [field: SerializeField] public int Steps { get; private set; }
     [SerializeReference] private List<ClothingEffect> Effects;
 
-    public void Activate(Unit _originUnit, BattleContext _battleContext)
+    public void Activate(Unit _originUnit, EncounterContext _context)
     {
-        foreach (ClothingEffect effect in Effects) effect.ActivateEffect(_originUnit, _battleContext);
+        foreach (ClothingEffect effect in Effects) effect.ActivateEffect(_originUnit, _context);
     }
 }
 

@@ -13,11 +13,13 @@ public class Unit : MonoBehaviour
     private void OnEnable()
     {
         equipment.OnEquipmentChanged += UpdateVisuals;
+        Data.OnDeath += HandleDeath;
     }
 
     private void OnDisable()
     {
         equipment.OnEquipmentChanged -= UpdateVisuals;
+        Data.OnDeath -= HandleDeath;
     }
 
     protected virtual void Awake()
@@ -35,6 +37,11 @@ public class Unit : MonoBehaviour
     {
         List<ClothingItem> readyClothingItems = equipment.StepClothing();
         return readyClothingItems;
+    }
+
+    protected virtual void HandleDeath(UnitData data)
+    {
+        Debug.Log($"{Data.Name} has died.");
     }
 
     public void Equip(ClothingItem _item) => equipment.Equip(_item);

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public interface IClothingEffect
 {
-    void ActivateEffect(Unit _originUnit, BattleContext _battleContext);
+    void ActivateEffect(Unit _originUnit, EncounterContext _context);
 }
 
 public abstract class ClothingEffect : ScriptableObject, IClothingEffect
@@ -33,11 +33,11 @@ public abstract class ClothingEffect : ScriptableObject, IClothingEffect
     [field: SerializeField] public EffectTargetPosition TargetPosition { get; private set; }
     [field: SerializeField] public ClothingSlot TargetSlot { get; private set; }
 
-    public virtual void ActivateEffect(Unit _originUnit, BattleContext _battleContext)
+    public virtual void ActivateEffect(Unit _originUnit, EncounterContext _context)
     {
         //Debug.Log($"Activating {Name} from {_originUnit.name}");
 
-        List<Unit> targets = GetTargetUnits(_originUnit, _battleContext);
+        List<Unit> targets = GetTargetUnits(_originUnit, _context);
 
         foreach (Unit target in targets)
         {
@@ -46,20 +46,20 @@ public abstract class ClothingEffect : ScriptableObject, IClothingEffect
         }
     }
 
-    protected virtual List<Unit> GetTargetUnits(Unit _originUnit, BattleContext _battleContext)
+    protected virtual List<Unit> GetTargetUnits(Unit _originUnit, EncounterContext _context)
     {
         List<Unit> targetList = TargetType switch
         {
             EffectTargetType.Self => new List<Unit>() { _originUnit },
-            EffectTargetType.Allies => _battleContext.GetAllies(_originUnit),
-            EffectTargetType.Enemies => _battleContext.GetEnemies(_originUnit),
+            EffectTargetType.Allies => _context.GetAllies(_originUnit),
+            EffectTargetType.Enemies => _context.GetEnemies(_originUnit),
             _ => throw new ArgumentOutOfRangeException()
         };
 
         targetList = TargetPosition switch
         {
-            EffectTargetPosition.First => _battleContext.GetFront(targetList),
-            EffectTargetPosition.Last => _battleContext.GetBack(targetList),
+            EffectTargetPosition.First => _context.GetFront(targetList),
+            EffectTargetPosition.Last => _context.GetBack(targetList),
             EffectTargetPosition.All => targetList,
             _ => throw new ArgumentOutOfRangeException()
         };
