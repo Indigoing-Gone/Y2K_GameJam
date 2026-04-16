@@ -6,6 +6,8 @@ public class Wardrobe : MonoBehaviour
     [SerializeField] private List<ClothingData> startingClothingItems;
     private Dictionary<ClothingSlot, List<ClothingItem>> availableClothing;
 
+    private bool canShiftWardrobe;
+
     void OnEnable()
     {
         WardrobeSlot.OnShiftingWardrobe += ShiftWardrobe;
@@ -18,6 +20,7 @@ public class Wardrobe : MonoBehaviour
 
     private void Awake()
     {
+        canShiftWardrobe = true;
         availableClothing = new Dictionary<ClothingSlot, List<ClothingItem>>();
 
         foreach (ClothingSlot _slot in System.Enum.GetValues(typeof(ClothingSlot)))
@@ -40,7 +43,7 @@ public class Wardrobe : MonoBehaviour
 
     private void ShiftWardrobe(int _direction, ClothingSlot _slot, Unit _unit)
     {
-        if (!availableClothing.ContainsKey(_slot)) return;
+        if (!canShiftWardrobe || !availableClothing.ContainsKey(_slot)) return;
 
         List<ClothingItem> _clothingItems = availableClothing[_slot];
         if (_clothingItems.Count == 0) return;

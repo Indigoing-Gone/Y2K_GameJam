@@ -38,10 +38,22 @@ public class EncounterContext
 
 public class EncounterHandler : MonoBehaviour
 {
+    static public Action<EncounterState> OnEncounterStateChanged;
+
     private EncounterContext encounterContext;
     private ClothingEventHandler clothingEventHandler;
 
     private List<Unit> battleUnits;
+    private EncounterState encounterState;
+    public EncounterState EncounterState
+    {
+        get => encounterState;
+        private set
+        {
+            encounterState = value;
+            OnEncounterStateChanged?.Invoke(encounterState);
+        }
+    }
 
     [Header("Step Timing")]
     [SerializeField] private float betweenStepInterval;
@@ -50,7 +62,6 @@ public class EncounterHandler : MonoBehaviour
     [Header("Monster Spawning")]
     [SerializeField] private Transform monsterSpawnPoint;
     [SerializeField] private float monsterSpawnSpacing;
-    private EncounterState encounterState;
 
     void OnEnable()
     {
@@ -66,12 +77,12 @@ public class EncounterHandler : MonoBehaviour
     {
         battleUnits = new List<Unit>();
         clothingEventHandler = new ClothingEventHandler(betweenClothingEventInterval);
-        encounterState = EncounterState.Finished;
+        EncounterState = EncounterState.Finished;
     }
 
     public void SetupEncounter(List<Hero> _heroes, MonsterEncounter _encounter)
     {
-        if(encounterState != EncounterState.Finished) return;
+        if(EncounterState != EncounterState.Finished) return;
 
         foreach (Hero _hero in _heroes) _hero.ResetEquipment();
         List<Unit> _reversedHeroes = new(_heroes);
@@ -90,7 +101,7 @@ public class EncounterHandler : MonoBehaviour
             battleUnits[i].Data.UpdateOrderIndex(i);
         }
 
-        encounterState = EncounterState.Setup;
+        EncounterState = EncounterState.Setup;
     }
 
     private List<Unit> SpawnMonsters(List<Monster> _monsters)
@@ -134,9 +145,9 @@ public class EncounterHandler : MonoBehaviour
 
     public void StartEncounter(Action<bool> _onEncounterSuccess)
     {
-        if(encounterState != EncounterState.Setup) return;
+        if(EncounterState != EncounterState.Setup) return;
 
-        encounterState = EncounterState.InProgress;
+        EncounterState = EncounterState.InProgress;
         StartCoroutine(StepEncounter(_onEncounterSuccess));
     }
 
@@ -166,7 +177,7 @@ public class EncounterHandler : MonoBehaviour
     {
         if (encounterContext.Heroes.Count == 0 || encounterContext.Monsters.Count == 0)
         {
-            encounterState = EncounterState.Finished;
+            EncounterState = EncounterState.Finished;
             _onEncounterSuccess?.Invoke(encounterContext.Monsters.Count == 0);
         }
         else StartCoroutine(StepEncounter(_onEncounterSuccess));

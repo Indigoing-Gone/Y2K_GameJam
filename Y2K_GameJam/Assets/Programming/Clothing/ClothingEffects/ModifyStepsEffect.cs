@@ -4,7 +4,7 @@ using System;
 [CreateAssetMenu(fileName = "ModifySteps", menuName = "Scriptable Objects/Clothing Effects/ModifySteps")]
 public class ModifyStepsEffect : ClothingEffect
 {
-    static public event Action<Unit, ClothingItem> OnModifiedClothingItemReady;
+    static public Action<Unit, ClothingItem> OnModifiedClothingItemReady;
 
     [field: SerializeField] public int StepModification { get; private set; }
 
