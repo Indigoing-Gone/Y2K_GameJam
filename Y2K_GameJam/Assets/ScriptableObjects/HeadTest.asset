@@ -17,4 +17,5 @@ MonoBehaviour:
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: 21300000, guid: 859d821a1175acd17aefe55db70da55b, type: 3}
   <Steps>k__BackingField: 2
-  Effects: []
+  Effects:
+  - {fileID: 11400000, guid: f2de7478ca1da0bb9a5d777b02ba2668, type: 2}

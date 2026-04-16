@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Equipment
 {
-    public event Action<ClothingItem> OnEquipmentChanged;
+    public event Action<ClothingSlot, ClothingItem> OnEquipmentChanged;
 
     private SortedDictionary<ClothingSlot, ClothingItem> equipment;
 
@@ -31,7 +31,7 @@ public class Equipment
 
         equipment[_slot] = _newItem;
         _newItem.SetEquipped(true);
-        OnEquipmentChanged?.Invoke(_newItem);
+        OnEquipmentChanged?.Invoke(_slot, _newItem);
     }
 
     public void Unequip(ClothingSlot _slot)
@@ -42,7 +42,7 @@ public class Equipment
         oldItem?.SetEquipped(false);
         equipment[_slot] = null;
 
-        OnEquipmentChanged?.Invoke(null);
+        OnEquipmentChanged?.Invoke(_slot, null);
     }
 
     public ClothingItem EquipmentInSlot(ClothingSlot slot) => equipment.ContainsKey(slot) ? equipment[slot] : null;
@@ -70,5 +70,16 @@ public class Equipment
             if (_item.IsReady) readyClothingItems.Add(_item);
         }
         return readyClothingItems;
+    }
+
+    public void ResetEquipment()
+    {
+        foreach (KeyValuePair<ClothingSlot, ClothingItem> _entry in equipment)
+        {
+            if (_entry.Value == null) continue;
+
+            ClothingItem _item = _entry.Value;
+            _item.ResetSteps();
+        }
     }
 }

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0bcc31eac7506729c1805f845f9d20, type: 3}
   m_Name: Attack
   m_EditorClassIdentifier: Assembly-CSharp::AttackEffect
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Basic Attack
   <Description>k__BackingField: 
-  <TargetType>k__BackingField: 0
+  <TargetType>k__BackingField: 2
   <TargetPosition>k__BackingField: 0
   <TargetSlot>k__BackingField: 0
   <Damage>k__BackingField: 5

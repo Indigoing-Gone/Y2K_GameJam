@@ -112,8 +112,8 @@ MonoBehaviour:
   <Data>k__BackingField:
     <Name>k__BackingField: 
     <OrderIndex>k__BackingField: 0
-    <Health>k__BackingField: 0
-    <AttackMultiplier>k__BackingField: 0
+    health: 100
+    <AttackMultiplier>k__BackingField: 1
 --- !u!114 &2918301677695161094
 MonoBehaviour:
   m_ObjectHideFlags: 0

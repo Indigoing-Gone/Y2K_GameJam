@@ -1,18 +1,15 @@
-using System.Collections.Generic;
-using AYellowpaper.SerializedCollections;
 using UnityEngine;
 
 public class EquipmentVisuals : MonoBehaviour
 {
     [SerializeField] private EquipmentSlotVisuals[] slotVisuals;
 
-    public void UpdateVisuals(ClothingItem _item)
+    public void UpdateVisuals(ClothingSlot _slot, ClothingItem _item)
     {
-        foreach (EquipmentSlotVisuals _slotVisual in slotVisuals) _slotVisual.UpdateVisual(_item);
+        foreach (EquipmentSlotVisuals _slotVisual in slotVisuals)
+        {
+            if(_slot != _slotVisual.ClothingSlot && _slot != ClothingSlot.All) continue;
+            _slotVisual.UpdateVisual(_item);
+        }
     }
-
-    // public void UpdateSteps()
-    // {
-    //     foreach (EquipmentSlotVisuals _slotVisual in slotVisuals) _slotVisual.UpdateSteps();
-    // }
 }

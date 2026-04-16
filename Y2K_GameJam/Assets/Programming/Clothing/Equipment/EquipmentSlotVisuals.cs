@@ -4,8 +4,8 @@ using UnityEngine;
 public class EquipmentSlotVisuals : MonoBehaviour
 {
     [Header("Clothing Info")]
-    [SerializeField] private ClothingSlot clothingSlot;
-    [SerializeField] private ClothingItem clothingItem;
+    [field: SerializeField] public ClothingSlot ClothingSlot { get; private set; }
+    private ClothingItem clothingItem;
 
     //Visuals
     private SpriteRenderer clothingRenderer;
@@ -16,6 +16,7 @@ public class EquipmentSlotVisuals : MonoBehaviour
         clothingItem = null;
         clothingRenderer = GetComponent<SpriteRenderer>();
         stepsText = GetComponentInChildren<TextMeshPro>();
+        UpdateVisual(null);
     }
 
     public void UpdateVisual(ClothingItem _item)
@@ -32,9 +33,6 @@ public class EquipmentSlotVisuals : MonoBehaviour
 
             return;
         }
-
-        if (_item.Data.Slot != clothingSlot) return;
-        
 
         clothingItem = _item;
         clothingItem.OnStepsUpdated += UpdateSteps;
