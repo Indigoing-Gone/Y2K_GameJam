@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EncounterHandler
   betweenStepInterval: 1
-  betweenClothingEventInterval: 0.4
+  betweenClothingEventInterval: 1
   monsterSpawnPoint: {fileID: 869375160}
   monsterSpawnSpacing: 1
 --- !u!1 &869375159

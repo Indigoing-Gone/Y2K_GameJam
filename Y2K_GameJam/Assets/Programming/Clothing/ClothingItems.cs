@@ -12,6 +12,13 @@ public enum ClothingSlot
     All
 }
 
+public enum ClothingPriority
+{
+    First,
+    Default,
+    Last
+}
+
 [CreateAssetMenu(fileName = "ClothingData", menuName = "Scriptable Objects/Clothing Data")]
 public class ClothingData : ScriptableObject
 {
@@ -22,6 +29,7 @@ public class ClothingData : ScriptableObject
     [field: SerializeField] public Sprite Sprite { get; private set; }
 
     [Header("Clothing Stats")]
+    [field: SerializeField] public ClothingPriority Priority { get; private set; } = ClothingPriority.Default;
     [field: SerializeField] public int Steps { get; private set; }
     [SerializeReference] private List<ClothingEffect> Effects;
 

@@ -20,8 +20,12 @@ public struct ClothingEventPriority : IComparer<ClothingEvent>
 {
     public int Compare(ClothingEvent x, ClothingEvent y)
     {
+        //Compare by Clothing Priority
+        int result = x.Item.Data.Priority.CompareTo(y.Item.Data.Priority);
+        if(result != 0) return result;
+
         //Compare by Owner Index in battle order
-        int result = x.Owner.Data.OrderIndex.CompareTo(y.Owner.Data.OrderIndex);
+        result = x.Owner.Data.OrderIndex.CompareTo(y.Owner.Data.OrderIndex);
         if(result != 0) return result;
 
         //If same Index, compare by Clothing Slot (to ensure consistent ordering)
