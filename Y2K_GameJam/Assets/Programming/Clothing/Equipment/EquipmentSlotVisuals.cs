@@ -7,9 +7,9 @@ public class EquipmentSlotVisuals : MonoBehaviour
     [SerializeField] private ClothingSlot clothingSlot;
     [SerializeField] private ClothingItem clothingItem;
 
-    [Header("Visuals")]
-    [SerializeField] private SpriteRenderer clothingRenderer;
-    [SerializeField] private TextMeshPro stepsText;
+    //Visuals
+    private SpriteRenderer clothingRenderer;
+    private TextMeshPro stepsText;
 
     void Awake()
     {
@@ -32,7 +32,7 @@ public class EquipmentSlotVisuals : MonoBehaviour
 
             return;
         }
-        
+
         if (_item.Data.Slot != clothingSlot) return;
         
 
