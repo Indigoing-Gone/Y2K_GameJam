@@ -69,7 +69,7 @@ public class UnitData
         {
             if(IsDead) return;
 
-            health = Mathf.Max(0, value);
+            health = Mathf.Max(0, Mathf.Min(value, MaxHealth));
             if(health == 0)
             {
                 IsDead = true;
@@ -101,11 +101,10 @@ public class UnitData
     {
         float damage = _damage;
         if (!_isTrueDamage) damage /= defenseMultiplier + tempDefenseMultiplier;
-        Debug.Log(_damage);
-        Debug.Log(defenseMultiplier + tempDefenseMultiplier);
-        Debug.Log(damage);
         Health -= (int)damage;
     } 
+
+    public void Heal(int _healing) => Health += _healing;
 
     // return float value representing percent health remaining
     public float PercentHealth() => (float)Health/MaxHealth;
