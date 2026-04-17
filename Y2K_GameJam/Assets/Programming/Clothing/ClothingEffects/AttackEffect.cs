@@ -7,11 +7,11 @@ using UnityEngine;
 public class AttackEffect : ClothingEffect
 {
     [Header("Attack Info")]
-    [field: SerializeField] public int Damage { get; private set; }
+    [SerializeField] public int damage;
 
     protected override void ApplyEffect(Unit _originUnit, Unit _targetUnit)
     {
-        int _finalDamage = Mathf.RoundToInt(Damage * _originUnit.Data.AttackMultiplier);
+        int _finalDamage = Mathf.RoundToInt(damage * _originUnit.Data.AttackMultiplier);
         _targetUnit.Data.TakeDamage(_finalDamage, false);
     }
 }

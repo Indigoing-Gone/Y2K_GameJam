@@ -21,9 +21,9 @@ public abstract class ClothingEffect
     }
 
     [Header("Targeting")]
-    [field: SerializeField] public EffectTargetType TargetType { get; private set; }
-    [field: SerializeField] public EffectTargetPosition TargetPosition { get; private set; }
-    [field: SerializeField] public ClothingSlot TargetSlot { get; private set; }
+    [SerializeField] public EffectTargetType targetType;
+    [SerializeField] public EffectTargetPosition targetPosition;
+    [SerializeField] public ClothingSlot TargetSlot;
 
     public virtual void ActivateEffect(Unit _originUnit, EncounterContext _context)
     {
@@ -40,7 +40,7 @@ public abstract class ClothingEffect
 
     protected virtual List<Unit> GetTargetUnits(Unit _originUnit, EncounterContext _context)
     {
-        List<Unit> targetList = TargetType switch
+        List<Unit> targetList = targetType switch
         {
             EffectTargetType.Self => new List<Unit>() { _originUnit },
             EffectTargetType.Allies => _context.GetAllies(_originUnit),
@@ -48,7 +48,7 @@ public abstract class ClothingEffect
             _ => throw new ArgumentOutOfRangeException()
         };
 
-        targetList = TargetPosition switch
+        targetList = targetPosition switch
         {
             EffectTargetPosition.First => _context.GetFront(targetList),
             EffectTargetPosition.Last => _context.GetBack(targetList),

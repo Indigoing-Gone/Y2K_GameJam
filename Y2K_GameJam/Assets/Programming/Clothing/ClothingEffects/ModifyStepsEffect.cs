@@ -9,7 +9,7 @@ public class ModifyStepsEffect : ClothingEffect
 {
     static public Action<Unit, ClothingItem> OnModifiedClothingItemReady;
 
-    [field: SerializeField] public int StepModification { get; private set; }
+    [SerializeField] public int stepModification;
 
     protected override void ApplyEffect(Unit _originUnit, Unit _targetUnit)
     {
@@ -25,7 +25,7 @@ public class ModifyStepsEffect : ClothingEffect
 
         foreach (ClothingItem _targetItem in _targetItems)
         {
-            _targetItem.ModifySteps(StepModification);
+            _targetItem.ModifySteps(stepModification);
             if (_targetItem.IsReady) OnModifiedClothingItemReady?.Invoke(_targetUnit, _targetItem);
         }
     }
