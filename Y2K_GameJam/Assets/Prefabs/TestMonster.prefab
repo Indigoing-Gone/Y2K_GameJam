@@ -410,7 +410,9 @@ MonoBehaviour:
   <Data>k__BackingField:
     <Name>k__BackingField: 
     <OrderIndex>k__BackingField: 0
+    <MaxHealth>k__BackingField: 10
     health: 10
     <AttackMultiplier>k__BackingField: 1
   clothingData:
   - {fileID: 11400000, guid: bdfcbcf250093f45e94a32b3bbcc8eb9, type: 2}
+  <Width>k__BackingField: 0

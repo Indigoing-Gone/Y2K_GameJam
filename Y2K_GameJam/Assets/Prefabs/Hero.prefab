@@ -112,6 +112,7 @@ MonoBehaviour:
   <Data>k__BackingField:
     <Name>k__BackingField: 
     <OrderIndex>k__BackingField: 0
+    <MaxHealth>k__BackingField: 100
     health: 100
     <AttackMultiplier>k__BackingField: 1
 --- !u!114 &2918301677695161094

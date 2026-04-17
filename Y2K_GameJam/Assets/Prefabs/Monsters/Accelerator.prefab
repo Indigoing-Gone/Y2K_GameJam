@@ -410,6 +410,7 @@ MonoBehaviour:
   <Data>k__BackingField:
     <Name>k__BackingField: Accelerator
     <OrderIndex>k__BackingField: 0
+    <MaxHealth>k__BackingField: 25
     health: 25
     <AttackMultiplier>k__BackingField: 1
   clothingData:

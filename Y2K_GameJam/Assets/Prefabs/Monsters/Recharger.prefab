@@ -410,6 +410,7 @@ MonoBehaviour:
   <Data>k__BackingField:
     <Name>k__BackingField: Recharger
     <OrderIndex>k__BackingField: 0
+    <MaxHealth>k__BackingField: 30
     health: 30
     <AttackMultiplier>k__BackingField: 1
   clothingData:

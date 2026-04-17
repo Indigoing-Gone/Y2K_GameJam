@@ -410,6 +410,7 @@ MonoBehaviour:
   <Data>k__BackingField:
     <Name>k__BackingField: Soldier
     <OrderIndex>k__BackingField: 0
+    <MaxHealth>k__BackingField: 40
     health: 40
     <AttackMultiplier>k__BackingField: 1
   clothingData:

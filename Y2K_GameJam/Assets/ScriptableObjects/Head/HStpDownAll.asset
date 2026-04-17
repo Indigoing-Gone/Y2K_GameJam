@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: HStpDownAll
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: HeadStepsDown
-  <Description>k__BackingField: 
+  <Description>k__BackingField: Decrease the step counters for all of your items
+    by 1.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: 6423877029817948959, guid: 3da4ed937c7ee8307a59ec3316677a04, type: 3}
   <Priority>k__BackingField: 1

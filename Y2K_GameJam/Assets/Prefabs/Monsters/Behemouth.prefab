@@ -410,6 +410,7 @@ MonoBehaviour:
   <Data>k__BackingField:
     <Name>k__BackingField: Behemouth
     <OrderIndex>k__BackingField: 0
+    <MaxHealth>k__BackingField: 100
     health: 100
     <AttackMultiplier>k__BackingField: 1
   clothingData:

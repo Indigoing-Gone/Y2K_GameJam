@@ -410,6 +410,7 @@ MonoBehaviour:
   <Data>k__BackingField:
     <Name>k__BackingField: Mite
     <OrderIndex>k__BackingField: 0
+    <MaxHealth>k__BackingField: 10
     health: 10
     <AttackMultiplier>k__BackingField: 1
   clothingData:

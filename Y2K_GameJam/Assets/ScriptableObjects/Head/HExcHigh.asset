@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
-  m_Name: FStepUpAllMon
+  m_Name: HExcHigh
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: Increase the step counters of all monsters by 1.
-  <Slot>k__BackingField: 4
-  <Sprite>k__BackingField: {fileID: 6423877029817948959, guid: 3da4ed937c7ee8307a59ec3316677a04, type: 3}
+  <Description>k__BackingField: Execute 90% health or below.
+  <Slot>k__BackingField: 1
+  <Sprite>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   <Priority>k__BackingField: 1
-  <Steps>k__BackingField: 3
+  <Steps>k__BackingField: 6
   Effects:
-  - rid: 6450501966783840266
+  - rid: 6450501966783840338
   references:
     version: 2
     RefIds:
-    - rid: 6450501966783840266
-      type: {class: ModifyStepsEffect, ns: , asm: Assembly-CSharp}
+    - rid: 6450501966783840338
+      type: {class: ExecuteEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 2
-        <TargetSlot>k__BackingField: 5
-        <StepModification>k__BackingField: 1
+        <TargetPosition>k__BackingField: 0
+        <TargetSlot>k__BackingField: 0
+        <Threshold>k__BackingField: 0.9

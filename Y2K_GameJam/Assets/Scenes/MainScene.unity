@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   heroes:
   - {fileID: 1495127005}
-  testEncounter: {fileID: 11400000, guid: d020f1751ad94e54eb14b1764910f594, type: 2}
+  testEncounter: {fileID: 11400000, guid: 5cfc97cbd81370c48be110d659d1f320, type: 2}
 --- !u!114 &617181292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,6 +937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Wardrobe
   startingClothingItems:
   - {fileID: 11400000, guid: 2b2e4048281ce2546a229ed3007552dd, type: 2}
+  - {fileID: 11400000, guid: d20da2774374f89478a2b8373c148415, type: 2}
   - {fileID: 11400000, guid: 90677f94787e57a4390e623833fcadfe, type: 2}
   - {fileID: 11400000, guid: f0ac35f3fef459242ad2e992c6e88290, type: 2}
   - {fileID: 11400000, guid: c3eaa349075b12e4c813f94d2363c005, type: 2}
@@ -947,6 +948,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 35838b67d7891884db0aec42c232bda6, type: 2}
   - {fileID: 11400000, guid: c50109111809d29429e29742ecda13a1, type: 2}
   - {fileID: 11400000, guid: f7fdded475fbd4348ba6ee26950f6327, type: 2}
+  - {fileID: 11400000, guid: d2bf8b3372a40684b91b44d538c43143, type: 2}
+  - {fileID: 11400000, guid: dde30b37a2512814bb40974ba9842c86, type: 2}
 --- !u!4 &2067200172
 Transform:
   m_ObjectHideFlags: 0

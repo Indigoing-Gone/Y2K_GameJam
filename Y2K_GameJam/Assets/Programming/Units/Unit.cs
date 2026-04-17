@@ -59,6 +59,8 @@ public class UnitData
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public int OrderIndex { get; private set; }
 
+    [field: SerializeField] public int MaxHealth { get; private set; }
+
     [SerializeField] private int health;
     public int Health
     {
@@ -79,16 +81,20 @@ public class UnitData
 
     [field: SerializeField] public float AttackMultiplier { get; private set; } = 1.0f;
 
-    public UnitData(string _name = "Unit", int _index = -1, int _health = 100)
+    public UnitData(string _name = "Unit", int _index = -1, int _maxHealth = 100)
     {
         Name = _name;
         OrderIndex = _index;
 
-        Health = _health;
+        MaxHealth = _maxHealth;
+        Health = MaxHealth;
         
         AttackMultiplier = 1.0f;
     }
 
     public void UpdateOrderIndex(int _index) => OrderIndex = _index;
-    public void TakeDamage(int _damage) => Health -= _damage;
+    public void TakeDamage(int _damage, bool _isTrueDamage) => Health -= _damage / (_isTrueDamage ? 1:1);
+
+    // return float value representing percent health remaining
+    public float PercentHealth() => (float)Health/MaxHealth;
 }
