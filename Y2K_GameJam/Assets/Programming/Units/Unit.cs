@@ -33,6 +33,7 @@ public class Unit : MonoBehaviour
     {
         equipment = new Equipment();
         equipmentVisuals = GetComponent<EquipmentVisuals>();
+        Data.Init();
     }
 
     protected void UpdateVisuals(ClothingSlot _slot, ClothingItem _item)
@@ -92,8 +93,15 @@ public class UnitData
     [field: SerializeField] public float TempAttackMultiplier { get; private set; } = 0f;
     [SerializeField] private float defenseMultiplier = 1.0f;
     [SerializeField] private float tempDefenseMultiplier = 0f;
-    [SerializeField] public Dictionary<StatusType, int> statuses;
+    private Dictionary<StatusType, int> statuses;
 
+    public void Init()
+    {
+        statuses = new Dictionary<StatusType, int>() {
+            {StatusType.Thorns, 0}, {StatusType.Burn, 0}, {StatusType.Patience, 0}
+        };
+    }
+    
     public UnitData(string _name = "Unit", int _index = -1, int _maxHealth = 100)
     {
         Name = _name;
@@ -110,7 +118,7 @@ public class UnitData
     public void TakeDamage(int _damage, bool _isTrueDamage)
     {
         float damage = _damage;
-        if (!_isTrueDamage) damage /= defenseMultiplier + tempDefenseMultiplier;
+        if (!_isTrueDamage) damage /= Mathf.Max(0.5f, defenseMultiplier + tempDefenseMultiplier);
         Health -= (int)damage;
     } 
 
@@ -139,6 +147,10 @@ public class UnitData
         //remove temps stat changes
         TempAttackMultiplier = 0f;
         tempDefenseMultiplier = 0f;
+        
+        if (statuses == null) {
+            Debug.LogError("The statuses dictionary is null!");
+        }
 
         //remove all thorns
         statuses[StatusType.Thorns] = 0;
@@ -167,4 +179,6 @@ public class UnitData
     public void GainStatus(int stacks, StatusType status) => statuses[status] += stacks;
 
     public int GetStatusStacks(StatusType status) => statuses[status];
+
+    public void ClearStatus(StatusType status) => statuses[status] = 0;
 }

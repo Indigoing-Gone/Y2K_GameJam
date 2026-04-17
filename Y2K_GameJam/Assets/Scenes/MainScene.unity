@@ -338,7 +338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   heroes:
   - {fileID: 1495127005}
-  testEncounter: {fileID: 11400000, guid: 5cfc97cbd81370c48be110d659d1f320, type: 2}
+  monsterEncounters:
+  - {fileID: 11400000, guid: 5cfc97cbd81370c48be110d659d1f320, type: 2}
+  - {fileID: 11400000, guid: 5cfc97cbd81370c48be110d659d1f320, type: 2}
 --- !u!114 &617181292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +583,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1220454822
 Canvas:
   m_ObjectHideFlags: 0
