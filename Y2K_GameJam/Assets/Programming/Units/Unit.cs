@@ -80,6 +80,9 @@ public class UnitData
     public bool IsDead { get; private set; }
 
     [field: SerializeField] public float AttackMultiplier { get; private set; } = 1.0f;
+    [field: SerializeField] public float TempAttackMultiplier { get; private set; } = 0f;
+    [SerializeField] private float defenseMultiplier = 1.0f;
+    [SerializeField] private float tempDefenseMultiplier = 0f;
 
     public UnitData(string _name = "Unit", int _index = -1, int _maxHealth = 100)
     {
@@ -93,8 +96,44 @@ public class UnitData
     }
 
     public void UpdateOrderIndex(int _index) => OrderIndex = _index;
-    public void TakeDamage(int _damage, bool _isTrueDamage) => Health -= _damage / (_isTrueDamage ? 1:1);
+    public void TakeDamage(int _damage, bool _isTrueDamage)
+    {
+        int damage = _damage;
+        if (!_isTrueDamage) damage /= (int)(defenseMultiplier+tempDefenseMultiplier);
+        Health -= damage;
+    } 
 
     // return float value representing percent health remaining
     public float PercentHealth() => (float)Health/MaxHealth;
+
+    public void Reset()
+    {
+        IsDead = false;
+        Health = MaxHealth;
+
+        AttackMultiplier = 1.0f;
+        defenseMultiplier = 1.0f;
+
+        TempAttackMultiplier = 0f;
+        tempDefenseMultiplier = 0f;
+    }
+
+    public void StatusUpdate()
+    {
+        TempAttackMultiplier = 0f;
+        tempDefenseMultiplier = 0f;
+    }
+
+    // STATUS EFFECTS
+    public void AdjustAttack(float adjustment, bool temporary)
+    {
+        if (temporary) TempAttackMultiplier += adjustment;
+        else AttackMultiplier += adjustment;
+    }
+
+    public void AdjustDefense(float adjustment, bool temporary)
+    {
+        if (temporary) tempDefenseMultiplier += adjustment;
+        else defenseMultiplier += adjustment;
+    }
 }

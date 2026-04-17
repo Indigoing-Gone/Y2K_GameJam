@@ -11,7 +11,7 @@ public class AttackEffect : ClothingEffect
 
     protected override void ApplyEffect(Unit _originUnit, Unit _targetUnit)
     {
-        int _finalDamage = Mathf.RoundToInt(damage * _originUnit.Data.AttackMultiplier);
+        int _finalDamage = Mathf.RoundToInt(damage * (_originUnit.Data.AttackMultiplier + _originUnit.Data.TempAttackMultiplier));
         _targetUnit.Data.TakeDamage(_finalDamage, false);
     }
 }
