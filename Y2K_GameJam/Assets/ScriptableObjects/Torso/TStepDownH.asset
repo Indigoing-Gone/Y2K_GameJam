@@ -10,13 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
-  m_Name: Head3
+  m_Name: TStepDownH
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
-  <Name>k__BackingField: HeadStepsDown
-  <Description>k__BackingField: 
-  <Slot>k__BackingField: 1
+  <Name>k__BackingField: 
+  <Description>k__BackingField: Decrease head item step counter by 1.
+  <Slot>k__BackingField: 2
   <Sprite>k__BackingField: {fileID: 6423877029817948959, guid: 3da4ed937c7ee8307a59ec3316677a04, type: 3}
   <Priority>k__BackingField: 1
-  <Steps>k__BackingField: 3
+  <Steps>k__BackingField: 2
   Effects:
-  - {fileID: 11400000, guid: 7e99a5359cba9474690308bd74447c93, type: 2}
+  - rid: 6450501951310266452
+  references:
+    version: 2
+    RefIds:
+    - rid: 6450501951310266452
+      type: {class: ModifyStepsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetType>k__BackingField: 0
+        <TargetPosition>k__BackingField: 0
+        <TargetSlot>k__BackingField: 1
+        <StepModification>k__BackingField: -1
