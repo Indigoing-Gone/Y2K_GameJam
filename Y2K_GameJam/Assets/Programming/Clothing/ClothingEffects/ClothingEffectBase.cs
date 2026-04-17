@@ -46,8 +46,8 @@ public abstract class ClothingEffect
         List<Unit> targetList = targetType switch
         {
             EffectTargetType.Self => new List<Unit>() { _originUnit },
-            EffectTargetType.Allies => _context.GetAllies(_originUnit),
-            EffectTargetType.Enemies => _context.GetEnemies(_originUnit),
+            EffectTargetType.Allies => new(_context.GetAllies(_originUnit)),
+            EffectTargetType.Enemies => new(_context.GetEnemies(_originUnit)),
             _ => throw new ArgumentOutOfRangeException()
         };
 

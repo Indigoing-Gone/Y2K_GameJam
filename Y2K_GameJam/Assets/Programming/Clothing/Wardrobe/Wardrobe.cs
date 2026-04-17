@@ -19,7 +19,7 @@ public class Wardrobe : MonoBehaviour
     }
 
     private void Awake()
-    {
+    {   
         canShiftWardrobe = true;
         availableClothing = new Dictionary<ClothingSlot, List<ClothingItem>>();
 
@@ -39,8 +39,7 @@ public class Wardrobe : MonoBehaviour
 
         availableClothing[_slot].Add(_item);
     }
-
-
+    
     private void ShiftWardrobe(int _direction, ClothingSlot _slot, Unit _unit)
     {
         if (!canShiftWardrobe || !availableClothing.ContainsKey(_slot)) return;
