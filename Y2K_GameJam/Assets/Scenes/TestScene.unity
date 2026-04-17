@@ -298,8 +298,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 617181290}
-  - component: {fileID: 617181292}
   - component: {fileID: 617181291}
+  - component: {fileID: 617181292}
+  - component: {fileID: 617181293}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -338,7 +339,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   heroes:
   - {fileID: 1495127005}
-  testEncounter: {fileID: 11400000, guid: 073b8c6e33183ec928419dfd59545ea4, type: 2}
+  monsterEncounters:
+  - {fileID: 11400000, guid: 073b8c6e33183ec928419dfd59545ea4, type: 2}
+  - {fileID: 11400000, guid: d020f1751ad94e54eb14b1764910f594, type: 2}
+  - {fileID: 11400000, guid: 5cfc97cbd81370c48be110d659d1f320, type: 2}
 --- !u!114 &617181292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +359,45 @@ MonoBehaviour:
   betweenClothingEventInterval: 1
   monsterSpawnPoint: {fileID: 869375160}
   monsterSpawnSpacing: 1
+--- !u!114 &617181293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617181288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26939a45cc1ef54b6a78153a74027de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopHandler
+  wardrobe: {fileID: 2067200171}
+  shopPanel: {fileID: 1999392243}
+  shopSlotPrefab: {fileID: 4236247430503358294, guid: 14a79d47a816eea48a9caed39bdc8346, type: 3}
+  ShopSlotCount: 6
+  allowedSelections: 2
+  availableClothingItems:
+  - {fileID: 11400000, guid: 35838b67d7891884db0aec42c232bda6, type: 2}
+  - {fileID: 11400000, guid: c50109111809d29429e29742ecda13a1, type: 2}
+  - {fileID: 11400000, guid: 16a54a7fe3e5c4049834d1e1e876d14d, type: 2}
+  - {fileID: 11400000, guid: dde30b37a2512814bb40974ba9842c86, type: 2}
+  - {fileID: 11400000, guid: d2bf8b3372a40684b91b44d538c43143, type: 2}
+  - {fileID: 11400000, guid: f7fdded475fbd4348ba6ee26950f6327, type: 2}
+  - {fileID: 11400000, guid: 90677f94787e57a4390e623833fcadfe, type: 2}
+  - {fileID: 11400000, guid: 2b2e4048281ce2546a229ed3007552dd, type: 2}
+  - {fileID: 11400000, guid: 6d801cdd48433a94dab18ed73a5c695b, type: 2}
+  - {fileID: 11400000, guid: d20da2774374f89478a2b8373c148415, type: 2}
+  - {fileID: 11400000, guid: f0ac35f3fef459242ad2e992c6e88290, type: 2}
+  - {fileID: 11400000, guid: 6d7a76b80ab011545baa0eecd425bcc5, type: 2}
+  - {fileID: 11400000, guid: 762c99afdf587d844819f2876c2eedbb, type: 2}
+  - {fileID: 11400000, guid: 6a0a67b61aee9184292e6eb21d110e09, type: 2}
+  - {fileID: 11400000, guid: 5e3c8cb92abe6664cad094623f874ab6, type: 2}
+  - {fileID: 11400000, guid: 23b6aaf9c72451b458bf3c43d5aee1cd, type: 2}
+  - {fileID: 11400000, guid: c3eaa349075b12e4c813f94d2363c005, type: 2}
+  - {fileID: 11400000, guid: bf702e4b6995fd74890958a8fbffc8e4, type: 2}
+  - {fileID: 11400000, guid: dae280f8920f1ec4fbef59b4771d5ebe, type: 2}
+  - {fileID: 11400000, guid: 2bb518599211630439645ddad7c8164a, type: 2}
+  - {fileID: 11400000, guid: 9946eec3660882148a0d8f2caa121c2d, type: 2}
 --- !u!1 &869375159
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +579,7 @@ GameObject:
   - component: {fileID: 1220454821}
   - component: {fileID: 1220454820}
   m_Layer: 5
-  m_Name: Start
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,7 +624,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1220454822
 Canvas:
   m_ObjectHideFlags: 0
@@ -617,6 +660,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 1999392243}
   - {fileID: 1599388335}
   m_Father: {fileID: 617181290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -906,6 +950,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1999392242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999392243}
+  - component: {fileID: 1999392247}
+  - component: {fileID: 1999392246}
+  - component: {fileID: 1999392245}
+  m_Layer: 5
+  m_Name: ShopPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1999392243
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999392242}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1220454823}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 208.875, y: 0}
+  m_SizeDelta: {x: 400, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1999392245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999392242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 25, y: 10}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!114 &1999392246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999392242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1999392247
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999392242}
+  m_CullTransparentMesh: 1
 --- !u!1 &2067200170
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,10 +1080,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wardrobe
   startingClothingItems:
-  - {fileID: 11400000, guid: bdfcbcf250093f45e94a32b3bbcc8eb9, type: 2}
-  - {fileID: 11400000, guid: d8012b2d0c535bf3ba3bfb147d4bc81b, type: 2}
-  - {fileID: 11400000, guid: 7688fe9a34eee10ae92ef36e97220cc9, type: 2}
-  - {fileID: 11400000, guid: fed5bcd47b4dbe906891a2960476eaa2, type: 2}
+  - {fileID: 11400000, guid: 2af14d2f79c8c2f47b533ace2a3df840, type: 2}
+  - {fileID: 11400000, guid: c3eaa349075b12e4c813f94d2363c005, type: 2}
+  - {fileID: 11400000, guid: 6a0a67b61aee9184292e6eb21d110e09, type: 2}
 --- !u!4 &2067200172
 Transform:
   m_ObjectHideFlags: 0
