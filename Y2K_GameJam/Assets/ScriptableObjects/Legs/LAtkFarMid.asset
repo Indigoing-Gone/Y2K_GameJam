@@ -26,7 +26,7 @@ MonoBehaviour:
     - rid: 6450501951310266449
       type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 1
-        <TargetSlot>k__BackingField: 0
-        <Damage>k__BackingField: 10
+        targetType: 2
+        targetPosition: 1
+        TargetSlot: 0
+        damage: 10

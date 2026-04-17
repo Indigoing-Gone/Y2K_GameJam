@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 7374389679132272931}
   - component: {fileID: 6510159967197274884}
   m_Layer: 0
-  m_Name: Behemouth
+  m_Name: Behemoth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monster
   <Data>k__BackingField:
-    <Name>k__BackingField: Behemouth
+    <Name>k__BackingField: Behemoth
     <OrderIndex>k__BackingField: 0
     <MaxHealth>k__BackingField: 100
     health: 100

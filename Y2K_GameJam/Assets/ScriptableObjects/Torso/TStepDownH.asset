@@ -26,7 +26,7 @@ MonoBehaviour:
     - rid: 6450501951310266452
       type: {class: ModifyStepsEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 0
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 1
-        <StepModification>k__BackingField: -1
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 1
+        stepModification: -1

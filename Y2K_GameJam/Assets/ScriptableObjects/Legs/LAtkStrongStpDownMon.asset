@@ -28,14 +28,14 @@ MonoBehaviour:
     - rid: 6450501951310266449
       type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <Damage>k__BackingField: 20
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        damage: 20
     - rid: 6450501951310266450
       type: {class: ModifyStepsEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <StepModification>k__BackingField: -1
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        stepModification: -1

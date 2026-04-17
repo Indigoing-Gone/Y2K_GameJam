@@ -27,14 +27,14 @@ MonoBehaviour:
     - rid: 6450501966783840341
       type: {class: ExecuteEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <Threshold>k__BackingField: 0.25
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        threshold: 0.25
     - rid: 6450501966783840342
       type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <Damage>k__BackingField: 15
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        damage: 15

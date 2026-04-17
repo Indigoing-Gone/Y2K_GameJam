@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
   m_Name: HStpDownAll
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
-  <Name>k__BackingField: HeadStepsDown
+  <Name>k__BackingField: 
   <Description>k__BackingField: Decrease the step counters for all of your items
     by 1.
   <Slot>k__BackingField: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
     - rid: 6450501951310266447
       type: {class: ModifyStepsEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 0
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 5
-        <StepModification>k__BackingField: -1
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 5
+        stepModification: -1

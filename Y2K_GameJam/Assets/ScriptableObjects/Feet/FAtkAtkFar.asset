@@ -20,21 +20,21 @@ MonoBehaviour:
   <Steps>k__BackingField: 3
   Effects:
   - rid: 6450501951310266454
-  - rid: 6450501951310266455
+  - rid: 3659436782736375882
   references:
     version: 2
     RefIds:
+    - rid: 3659436782736375882
+      type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 2
+        targetPosition: 1
+        TargetSlot: 0
+        damage: 15
     - rid: 6450501951310266454
       type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <Damage>k__BackingField: 15
-    - rid: 6450501951310266455
-      type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 1
-        <TargetSlot>k__BackingField: 0
-        <Damage>k__BackingField: 15
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        damage: 15

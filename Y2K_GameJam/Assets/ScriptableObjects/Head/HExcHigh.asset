@@ -26,7 +26,7 @@ MonoBehaviour:
     - rid: 6450501966783840338
       type: {class: ExecuteEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <Threshold>k__BackingField: 0.9
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        threshold: 0.9
