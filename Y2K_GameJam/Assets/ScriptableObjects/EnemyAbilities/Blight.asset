@@ -16,7 +16,7 @@ MonoBehaviour:
   <Description>k__BackingField: Attack the player for 15 damage. Attack all monsters
     for 7 damage.
   <Slot>k__BackingField: 1
-  <Sprite>k__BackingField: {fileID: 6423877029817948959, guid: 3da4ed937c7ee8307a59ec3316677a04, type: 3}
+  <Sprite>k__BackingField: {fileID: 0}
   <Priority>k__BackingField: 1
   <Steps>k__BackingField: 3
   Effects:

@@ -10,31 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
-  m_Name: FExcAtk
+  m_Name: TAtkLrgDefDown
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: 'Execute %25 health or less. Attack for 15 damage. '
-  <Slot>k__BackingField: 4
-  <Sprite>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: Attack for 25 damage, but your defense decreased
+    by 20% until the end of the turn.
+  <Slot>k__BackingField: 2
+  <Sprite>k__BackingField: {fileID: 6423877029817948959, guid: 3da4ed937c7ee8307a59ec3316677a04, type: 3}
   <Priority>k__BackingField: 1
   <Steps>k__BackingField: 3
   Effects:
-  - rid: 6450501966783840341
-  - rid: 6450501966783840342
+  - rid: 3659436784734699527
+  - rid: 3659436784734699528
   references:
     version: 2
     RefIds:
-    - rid: 6450501966783840341
-      type: {class: ExecuteEffect, ns: , asm: Assembly-CSharp}
-      data:
-        targetType: 2
-        targetPosition: 0
-        TargetSlot: 0
-        threshold: 0.25
-    - rid: 6450501966783840342
+    - rid: 3659436784734699527
       type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
       data:
         targetType: 2
         targetPosition: 0
         TargetSlot: 0
-        damage: 15
+        damage: 25
+    - rid: 3659436784734699528
+      type: {class: AdjustDefEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 0
+        adjustment: -0.2
+        temporary: 1
