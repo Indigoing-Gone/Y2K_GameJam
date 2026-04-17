@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
+  m_Name: Head2
+  m_EditorClassIdentifier: Assembly-CSharp::ClothingData
+  <Name>k__BackingField: HeadLargeAttack
+  <Description>k__BackingField: 
+  <Slot>k__BackingField: 1
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 859d821a1175acd17aefe55db70da55b, type: 3}
+  <Priority>k__BackingField: 1
+  <Steps>k__BackingField: 2
+  Effects:
+  - {fileID: 11400000, guid: 129d6239b81346c4d90676f2b0eb407a, type: 2}
