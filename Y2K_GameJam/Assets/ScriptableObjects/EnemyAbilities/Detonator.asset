@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: Detonator
   <Description>k__BackingField: Attack for 50 damage. Dies.
   <Slot>k__BackingField: 1
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: -3365899965060384222, guid: 7c0f5f2efe8bda7539a90a4304ff0e47, type: 3}
   <Priority>k__BackingField: 1
   <Steps>k__BackingField: 4
   Effects:
