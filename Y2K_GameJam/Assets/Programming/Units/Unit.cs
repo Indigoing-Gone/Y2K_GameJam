@@ -2,6 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum StatusType
+{
+    Thorns,
+    Burn,
+    Patience
+}
+
 [RequireComponent(typeof(EquipmentVisuals))]
 public class Unit : MonoBehaviour
 {
@@ -79,10 +86,13 @@ public class UnitData
     }
     public bool IsDead { get; private set; }
 
+
+    // STATUS EFFECTS
     [field: SerializeField] public float AttackMultiplier { get; private set; } = 1.0f;
     [field: SerializeField] public float TempAttackMultiplier { get; private set; } = 0f;
     [SerializeField] private float defenseMultiplier = 1.0f;
     [SerializeField] private float tempDefenseMultiplier = 0f;
+    [SerializeField] public Dictionary<StatusType, int> statuses;
 
     public UnitData(string _name = "Unit", int _index = -1, int _maxHealth = 100)
     {
@@ -119,12 +129,26 @@ public class UnitData
 
         TempAttackMultiplier = 0f;
         tempDefenseMultiplier = 0f;
+
+        foreach (KeyValuePair<StatusType, int> _status in statuses) statuses[_status.Key] = 0;
+
     }
 
     public void StatusUpdate()
     {
+        //remove temps stat changes
         TempAttackMultiplier = 0f;
         tempDefenseMultiplier = 0f;
+
+        //remove all thorns
+        statuses[StatusType.Thorns] = 0;
+        
+        //deal burn damage and reduce stacks
+        TakeDamage(statuses[StatusType.Burn], false);
+        statuses[StatusType.Burn] = Mathf.Max(0, statuses[StatusType.Burn] - 10);
+
+        //double patience
+        statuses[StatusType.Patience] *= 2;
     }
 
     // STATUS EFFECTS
@@ -139,4 +163,8 @@ public class UnitData
         if (temporary) tempDefenseMultiplier += adjustment;
         else defenseMultiplier += adjustment;
     }
+
+    public void GainStatus(int stacks, StatusType status) => statuses[status] += stacks;
+
+    public int GetStatusStacks(StatusType status) => statuses[status];
 }

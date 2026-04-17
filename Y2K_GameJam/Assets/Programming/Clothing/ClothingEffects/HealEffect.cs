@@ -1,16 +1,15 @@
+using System;
+using SerializeReferenceEditor;
 using UnityEngine;
 
-public class HealEffect : MonoBehaviour
+[Serializable, SRName("Heal")]
+public class HealEffect : ClothingEffect
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("Healing Info")]
+    [SerializeField] public int healing;
 
-    // Update is called once per frame
-    void Update()
+    protected override void ApplyEffect(Unit _originUnit, Unit _targetUnit)
     {
-        
+        _targetUnit.Data.Heal(healing);
     }
 }
