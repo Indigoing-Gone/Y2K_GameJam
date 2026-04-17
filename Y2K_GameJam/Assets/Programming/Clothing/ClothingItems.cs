@@ -25,7 +25,7 @@ public class ClothingData : ScriptableObject
 {
     [Header("Clothing Info")]
     [field: SerializeField] public string Name { get; private set; }
-    [field: SerializeField] public string Description { get; private set; }
+    [field: SerializeField, TextArea(3, 10)] public string Description { get; private set; }
     [field: SerializeField] public ClothingSlot Slot { get; private set; }
     [field: SerializeField] public Sprite Sprite { get; private set; }
 
