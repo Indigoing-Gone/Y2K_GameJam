@@ -13,28 +13,28 @@ MonoBehaviour:
   m_Name: Detonator
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Detonator
-  <Description>k__BackingField: Attack for 50 damage. Attack self for 1000 damage.
+  <Description>k__BackingField: Attack for 50 damage. Dies.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: 0}
   <Priority>k__BackingField: 1
   <Steps>k__BackingField: 4
   Effects:
   - rid: 6450501966783840259
-  - rid: 6450501966783840260
+  - rid: 7915561631289180241
   references:
     version: 2
     RefIds:
     - rid: 6450501966783840259
       type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <Damage>k__BackingField: 50
-    - rid: 6450501966783840260
-      type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        damage: 50
+    - rid: 7915561631289180241
+      type: {class: ExecuteEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 0
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <Damage>k__BackingField: 1000
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 0
+        threshold: 1

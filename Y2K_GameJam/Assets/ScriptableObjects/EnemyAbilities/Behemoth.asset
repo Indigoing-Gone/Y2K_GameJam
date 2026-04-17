@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
-  m_Name: Behemouth
+  m_Name: Behemoth
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
-  <Name>k__BackingField: Behemouth
+  <Name>k__BackingField: Behemoth
   <Description>k__BackingField: Attack for 50 damage.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
@@ -26,7 +26,7 @@ MonoBehaviour:
     - rid: 6450501951310266440
       type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
       data:
-        <TargetType>k__BackingField: 2
-        <TargetPosition>k__BackingField: 0
-        <TargetSlot>k__BackingField: 0
-        <Damage>k__BackingField: 50
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        damage: 50
