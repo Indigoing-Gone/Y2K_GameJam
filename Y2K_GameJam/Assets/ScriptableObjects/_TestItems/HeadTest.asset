@@ -20,3 +20,4 @@ MonoBehaviour:
   <Steps>k__BackingField: 2
   Effects:
   - {fileID: 11400000, guid: f2de7478ca1da0bb9a5d777b02ba2668, type: 2}
+  - {fileID: 11400000, guid: 039d2ce839b7c534f8b41e795965db14, type: 2}

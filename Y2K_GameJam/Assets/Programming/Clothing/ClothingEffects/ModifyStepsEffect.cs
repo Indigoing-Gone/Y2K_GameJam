@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "ModifySteps", menuName = "Scriptable Objects/Clothing Effects/ModifySteps")]
 public class ModifyStepsEffect : ClothingEffect
@@ -10,15 +11,20 @@ public class ModifyStepsEffect : ClothingEffect
 
     protected override void ApplyEffect(Unit _originUnit, Unit _targetUnit)
     {
-        ClothingItem _targetItem = _targetUnit.EquipmentInSlot(TargetSlot);
-        if (_targetItem == null) return;
+        List<ClothingItem> _targetItems = new();
 
-        for (int i = 0; i < Math.Abs(StepModification); i++)
+        if (TargetSlot == ClothingSlot.All) _targetItems = _targetUnit.AllEquipment();
+        else
         {
-            if (StepModification < 0) _targetItem.ModifySteps(-1);
-            else _targetItem.ModifySteps(1);
+            ClothingItem _targetItem = _targetUnit.EquipmentInSlot(TargetSlot);
+            if (_targetItem == null) return;
+            _targetItems.Add(_targetItem);
         }
 
-        if (_targetItem.IsReady) OnModifiedClothingItemReady?.Invoke(_targetUnit, _targetItem);
+        foreach (ClothingItem _targetItem in _targetItems)
+        {
+            _targetItem.ModifySteps(StepModification);
+            if (_targetItem.IsReady) OnModifiedClothingItemReady?.Invoke(_targetUnit, _targetItem);
+        }
     }
 }
