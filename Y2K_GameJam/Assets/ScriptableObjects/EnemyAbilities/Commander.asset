@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3927356d2bd023409342b19d014f4d3, type: 3}
+  m_Name: Commander
+  m_EditorClassIdentifier: Assembly-CSharp::ClothingData
+  <Name>k__BackingField: Commander
+  <Description>k__BackingField: Attack for 25 damage. Reduce the front and back monster
+    step counters by 1.
+  <Slot>k__BackingField: 1
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 859d821a1175acd17aefe55db70da55b, type: 3}
+  <Priority>k__BackingField: 1
+  <Steps>k__BackingField: 2
+  Effects:
+  - rid: 6450501966783840256
+  - rid: 6450501966783840257
+  - rid: 6450501966783840258
+  references:
+    version: 2
+    RefIds:
+    - rid: 6450501966783840256
+      type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetType>k__BackingField: 2
+        <TargetPosition>k__BackingField: 0
+        <TargetSlot>k__BackingField: 0
+        <Damage>k__BackingField: 25
+    - rid: 6450501966783840257
+      type: {class: ModifyStepsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetType>k__BackingField: 1
+        <TargetPosition>k__BackingField: 0
+        <TargetSlot>k__BackingField: 5
+        <StepModification>k__BackingField: -1
+    - rid: 6450501966783840258
+      type: {class: ModifyStepsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetType>k__BackingField: 1
+        <TargetPosition>k__BackingField: 1
+        <TargetSlot>k__BackingField: 5
+        <StepModification>k__BackingField: -1
