@@ -93,14 +93,18 @@ public class UnitData
         Health = MaxHealth;
         
         AttackMultiplier = 1.0f;
+        defenseMultiplier = 1.0f;
     }
 
     public void UpdateOrderIndex(int _index) => OrderIndex = _index;
     public void TakeDamage(int _damage, bool _isTrueDamage)
     {
-        int damage = _damage;
-        if (!_isTrueDamage) damage /= (int)(defenseMultiplier+tempDefenseMultiplier);
-        Health -= damage;
+        float damage = _damage;
+        if (!_isTrueDamage) damage /= defenseMultiplier + tempDefenseMultiplier;
+        Debug.Log(_damage);
+        Debug.Log(defenseMultiplier + tempDefenseMultiplier);
+        Debug.Log(damage);
+        Health -= (int)damage;
     } 
 
     // return float value representing percent health remaining

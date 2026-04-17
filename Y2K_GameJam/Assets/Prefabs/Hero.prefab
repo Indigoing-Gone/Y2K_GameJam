@@ -115,6 +115,9 @@ MonoBehaviour:
     <MaxHealth>k__BackingField: 100
     health: 100
     <AttackMultiplier>k__BackingField: 1
+    <TempAttackMultiplier>k__BackingField: 0
+    defenseMultiplier: 1
+    tempDefenseMultiplier: 0
 --- !u!114 &2918301677695161094
 MonoBehaviour:
   m_ObjectHideFlags: 0

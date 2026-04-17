@@ -413,6 +413,9 @@ MonoBehaviour:
     <MaxHealth>k__BackingField: 100
     health: 100
     <AttackMultiplier>k__BackingField: 1
+    <TempAttackMultiplier>k__BackingField: 0
+    defenseMultiplier: 1
+    tempDefenseMultiplier: 0
   clothingData:
   - {fileID: 11400000, guid: d9f039e93b080404b849eaca8d5167a0, type: 2}
   <Width>k__BackingField: 0

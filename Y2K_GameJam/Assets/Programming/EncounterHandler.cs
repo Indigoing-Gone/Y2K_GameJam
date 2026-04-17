@@ -169,6 +169,7 @@ public class EncounterHandler : MonoBehaviour
         foreach (Unit _unit in battleUnits)
         {
             List<ClothingItem> readyClothingItems = _unit.StepEquipment();
+            _unit.Data.StatusUpdate();
             foreach (ClothingItem _item in readyClothingItems) clothingEventHandler.EnqueueClothingEvent(_unit, _item);
         }
     }
