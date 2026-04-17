@@ -1,4 +1,6 @@
 ﻿<Solution>
+  <Project Path="SREditor-Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="SREditor.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />
 </Solution>

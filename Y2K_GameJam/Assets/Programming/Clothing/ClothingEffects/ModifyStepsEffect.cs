@@ -1,8 +1,10 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using SerializeReferenceEditor;
 
-[CreateAssetMenu(fileName = "ModifySteps", menuName = "Scriptable Objects/Clothing Effects/ModifySteps")]
+//[CreateAssetMenu(fileName = "ModifySteps", menuName = "Scriptable Objects/Clothing Effects/ModifySteps")]
+[Serializable, SRName("ModifySteps")]
 public class ModifyStepsEffect : ClothingEffect
 {
     static public Action<Unit, ClothingItem> OnModifiedClothingItemReady;

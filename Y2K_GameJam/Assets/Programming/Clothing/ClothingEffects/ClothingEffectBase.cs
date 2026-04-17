@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public interface IClothingEffect
-{
-    void ActivateEffect(Unit _originUnit, EncounterContext _context);
-}
-
-public abstract class ClothingEffect : ScriptableObject, IClothingEffect
+[Serializable]
+public abstract class ClothingEffect
 {
     public enum EffectTargetType
     {
@@ -23,10 +19,6 @@ public abstract class ClothingEffect : ScriptableObject, IClothingEffect
         Last,
         All
     }
-
-    [Header("Effect Info")]
-    [field: SerializeField] public string Name { get; private set; }
-    [field: SerializeField] public string Description { get; private set; }
 
     [Header("Targeting")]
     [field: SerializeField] public EffectTargetType TargetType { get; private set; }

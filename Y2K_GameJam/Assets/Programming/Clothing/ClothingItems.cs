@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using SerializeReferenceEditor;
 using UnityEngine;
 
 public enum ClothingSlot
@@ -31,7 +32,7 @@ public class ClothingData : ScriptableObject
     [Header("Clothing Stats")]
     [field: SerializeField] public ClothingPriority Priority { get; private set; } = ClothingPriority.Default;
     [field: SerializeField] public int Steps { get; private set; }
-    [SerializeReference] private List<ClothingEffect> Effects;
+    [SerializeReference, SR] private List<ClothingEffect> Effects;
 
     public void Activate(Unit _originUnit, EncounterContext _context)
     {

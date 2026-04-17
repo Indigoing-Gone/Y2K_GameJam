@@ -1,6 +1,9 @@
+using System;
+using SerializeReferenceEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Attack", menuName = "Scriptable Objects/Clothing Effects/Attack")]
+//[CreateAssetMenu(fileName = "Attack", menuName = "Scriptable Objects/Clothing Effects/Attack")]
+[Serializable, SRName("Attack")]
 public class AttackEffect : ClothingEffect
 {
     [Header("Attack Info")]
