@@ -59,7 +59,7 @@ public abstract class ClothingEffect
         if (TargetSlot != ClothingSlot.None)
         {
             if (TargetSlot == ClothingSlot.All) targetList = targetList.Where(target => target.AllEquipment().Count > 0).ToList();
-            targetList = targetList.Where(target => target.EquipmentInSlot(TargetSlot) != null).ToList();
+            else targetList = targetList.Where(target => target.EquipmentInSlot(TargetSlot) != null).ToList();
         }
 
         return targetList;
