@@ -147,10 +147,6 @@ public class UnitData
         //remove temps stat changes
         TempAttackMultiplier = 0f;
         tempDefenseMultiplier = 0f;
-        
-        if (statuses == null) {
-            Debug.LogError("The statuses dictionary is null!");
-        }
 
         //remove all thorns
         statuses[StatusType.Thorns] = 0;
