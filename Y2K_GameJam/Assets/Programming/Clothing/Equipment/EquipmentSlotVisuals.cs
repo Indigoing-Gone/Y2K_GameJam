@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(Tooltip))]
 public class EquipmentSlotVisuals : MonoBehaviour
 {
     [Header("Clothing Info")]
@@ -10,12 +11,15 @@ public class EquipmentSlotVisuals : MonoBehaviour
     //Visuals
     private SpriteRenderer clothingRenderer;
     private TextMeshPro stepsText;
+    private Tooltip tooltip;
 
     void Awake()
     {
         clothingItem = null;
         clothingRenderer = GetComponent<SpriteRenderer>();
         stepsText = GetComponentInChildren<TextMeshPro>();
+        tooltip = GetComponent<Tooltip>();
+
         UpdateVisual(null);
     }
 
@@ -30,6 +34,7 @@ public class EquipmentSlotVisuals : MonoBehaviour
             clothingItem = null;
             clothingRenderer.sprite = null;
             stepsText.text = "-";
+            tooltip.SetTooltipText(string.Empty);
 
             return;
         }
@@ -39,6 +44,7 @@ public class EquipmentSlotVisuals : MonoBehaviour
         UpdateSteps();
         
         clothingRenderer.sprite = _item.Data.Sprite;
+        tooltip.SetTooltipText(_item.Data.Description);
     }
 
     private void UpdateSteps()

@@ -1,6 +1,4 @@
-using System;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,12 +13,6 @@ public class TooltipHandler : MonoBehaviour
 
     //[SerializeField] private Vector2 offset;
 
-    void OnEnable()
-    {
-        OnShowTooltip += ShowTooltip;
-        OnHideTooltip += HideTooltip;
-    }
-
     void Awake()
     {
         canvas = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
@@ -31,24 +23,20 @@ public class TooltipHandler : MonoBehaviour
         HideTooltip();
     }
 
-    void SetPosition(Vector3 _position)
+    void Update()
     {
-        //(Mouse.current.position.ReadValue()) / canvas.localScale.x;
-        Vector2 anchoredPosition = _position;
+        RaycastHit2D _hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()), Vector2.zero);
+        
+        if(_hit.collider == null || 
+            !_hit.collider.TryGetComponent<Tooltip>(out var _tooltip) || 
+            _tooltip.TooltipData == null || 
+            _tooltip.TooltipData.Text == string.Empty)
+        {
+            HideTooltip();
+            return;
+        }
 
-        anchoredPosition.x = Mathf.Clamp(anchoredPosition.x, tooltipBackground.rect.width / 2, canvas.rect.width - (tooltipBackground.rect.width / 2));
-        anchoredPosition.y = Mathf.Clamp(anchoredPosition.y, tooltipBackground.rect.height / 2, canvas.rect.height - (tooltipBackground.rect.height / 2));
-
-        rectTransform.anchoredPosition = anchoredPosition;
-    }
-
-
-    private void SetText(string _text)
-    {
-        tooltipText.SetText(_text);
-        tooltipText.ForceMeshUpdate();
-        Vector2 textSize = tooltipText.GetRenderedValues(false);
-        tooltipBackground.sizeDelta = textSize + new Vector2(tooltipText.margin.x, tooltipText.margin.y) * 2f;
+        ShowTooltip(_tooltip.TooltipData);
     }
 
     private void ShowTooltip(TooltipData _tooltipData)
@@ -64,5 +52,24 @@ public class TooltipHandler : MonoBehaviour
     {
         SetText(string.Empty);
         tooltipBackground.gameObject.SetActive(false);
+    }
+
+    void SetPosition(Vector3 _position)
+    {
+        //(Mouse.current.position.ReadValue()) / canvas.localScale.x;
+        Vector3 anchoredPosition = _position / canvas.localScale.x;
+
+        anchoredPosition.x = Mathf.Clamp(anchoredPosition.x, tooltipBackground.rect.width / 2, canvas.rect.width - (tooltipBackground.rect.width / 2));
+        anchoredPosition.y = Mathf.Clamp(anchoredPosition.y, tooltipBackground.rect.height / 2, canvas.rect.height - (tooltipBackground.rect.height / 2));
+
+        rectTransform.anchoredPosition = anchoredPosition;
+    }
+
+    private void SetText(string _text)
+    {
+        tooltipText.SetText(_text);
+        tooltipText.ForceMeshUpdate();
+        Vector2 textSize = tooltipText.GetRenderedValues(false);
+        tooltipBackground.sizeDelta = textSize + new Vector2(tooltipText.margin.x, tooltipText.margin.y) * 2f;
     }
 }

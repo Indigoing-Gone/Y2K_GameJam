@@ -17,22 +17,15 @@ public class TooltipData
 }
 
 
-public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Tooltip : MonoBehaviour
 {
-    public static event Action<TooltipData> OnShowTooltip;
-    public static event Action OnHideTooltip;
+
 
     [field: SerializeField] public TooltipData TooltipData { get; private set; }
     [SerializeField] private Vector3 Offset;
 
-    void Awake() => TooltipData = new TooltipData(string.Empty, transform.position + Offset);
+    void Awake() => SetTooltipPosition(Camera.main.WorldToScreenPoint(transform.position + Offset));
 
     public void SetTooltipText(string _text) => TooltipData.Text = _text;
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log($"Showing tooltip with text: {TooltipData.Text} at position: {TooltipData.Position}");
-        OnShowTooltip?.Invoke(TooltipData);
-    }
-    public void OnPointerExit(PointerEventData eventData) => OnHideTooltip?.Invoke();
+    public void SetTooltipPosition(Vector3 _position) => TooltipData.Position = _position;
 }
