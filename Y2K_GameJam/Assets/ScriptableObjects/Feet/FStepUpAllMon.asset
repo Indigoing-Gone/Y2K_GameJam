@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: 
   <Description>k__BackingField: Increase the step counters of all monsters by 1.
   <Slot>k__BackingField: 4
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 465c1c5fba9a19e9382269ef7c9143df, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 3b954f7f012290b0f9f7954de5ddd85b, type: 3}
   <Priority>k__BackingField: 1
   <Steps>k__BackingField: 3
   Effects:

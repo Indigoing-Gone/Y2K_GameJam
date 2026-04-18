@@ -1057,8 +1057,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wardrobe
   startingClothingItems:
-  - {fileID: 11400000, guid: a9ff8a8d93f952d48b5f3db249e79801, type: 2}
+  - {fileID: 11400000, guid: 2b2e4048281ce2546a229ed3007552dd, type: 2}
   - {fileID: 11400000, guid: c3eaa349075b12e4c813f94d2363c005, type: 2}
+  - {fileID: 11400000, guid: 762c99afdf587d844819f2876c2eedbb, type: 2}
+  - {fileID: 11400000, guid: 35838b67d7891884db0aec42c232bda6, type: 2}
 --- !u!4 &2067200172
 Transform:
   m_ObjectHideFlags: 0

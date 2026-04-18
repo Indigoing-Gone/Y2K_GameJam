@@ -16,7 +16,7 @@ MonoBehaviour:
   <Description>k__BackingField: Increase defense by 50% this step, but decrease damage
     by 25% this turn.
   <Slot>k__BackingField: 2
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 9ff2947fe39b2fef587dfde931d194b4, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: c0b9c5b893ca069fdbb365e67453f189, type: 3}
   <Priority>k__BackingField: 1
   <Steps>k__BackingField: 3
   Effects:

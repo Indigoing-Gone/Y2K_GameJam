@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Execution
   m_EditorClassIdentifier: Assembly-CSharp::MonsterEncounter
   <Monsters>k__BackingField:
-  - {fileID: 6510159967197274884, guid: 65e4a4976e01de0499f51e9c59798ebd, type: 3}
   - {fileID: 6510159967197274884, guid: 67b6f3fb91790d04a8364e855d99869d, type: 3}
