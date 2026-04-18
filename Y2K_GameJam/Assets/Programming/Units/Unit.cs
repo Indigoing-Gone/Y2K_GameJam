@@ -142,7 +142,7 @@ public class UnitData
         
         //deal burn damage and reduce stacks
         TakeDamage(statuses[StatusType.Burn], false);
-        statuses[StatusType.Burn] = Mathf.Max(0, statuses[StatusType.Burn] - 10);
+        statuses[StatusType.Burn] = Mathf.Max(0, statuses[StatusType.Burn] - 5);
 
         //double Chillax
         statuses[StatusType.Chillax] *= 2;
