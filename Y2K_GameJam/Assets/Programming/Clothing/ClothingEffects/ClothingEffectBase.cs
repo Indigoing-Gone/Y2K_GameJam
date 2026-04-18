@@ -26,7 +26,7 @@ public abstract class ClothingEffect
     [SerializeField] public EffectTargetPosition targetPosition;
     [SerializeField] public ClothingSlot TargetSlot;
 
-    public virtual IEnumerator ActivateEffect(Unit _originUnit, EncounterContext _context)
+    public virtual void ActivateEffect(Unit _originUnit, EncounterContext _context)
     {
         //Debug.Log($"Activating {Name} from {_originUnit.name}");
 
@@ -37,8 +37,6 @@ public abstract class ClothingEffect
             if (target == null) continue;
             ApplyEffect(_originUnit, target);
         }
-
-        yield return null;
     }
 
     protected virtual List<Unit> GetTargetUnits(Unit _originUnit, EncounterContext _context)

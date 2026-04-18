@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +24,7 @@ public class Wardrobe : MonoBehaviour
         canShiftWardrobe = true;
         availableClothing = new Dictionary<ClothingSlot, List<ClothingItem>>();
 
-        foreach (ClothingSlot _slot in System.Enum.GetValues(typeof(ClothingSlot)))
+        foreach (ClothingSlot _slot in Enum.GetValues(typeof(ClothingSlot)))
         {
             if (_slot == ClothingSlot.None || _slot == ClothingSlot.All) continue;
             availableClothing[_slot] = new List<ClothingItem> { null };

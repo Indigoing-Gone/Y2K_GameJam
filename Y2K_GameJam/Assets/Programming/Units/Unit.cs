@@ -100,18 +100,8 @@ public class UnitData
         statuses = new Dictionary<StatusType, int>() {
             {StatusType.Thorns, 0}, {StatusType.Burn, 0}, {StatusType.Patience, 0}
         };
-    }
-    
-    public UnitData(string _name = "Unit", int _index = -1, int _maxHealth = 100)
-    {
-        Name = _name;
-        OrderIndex = _index;
 
-        MaxHealth = _maxHealth;
-        Health = MaxHealth;
-        
-        AttackMultiplier = 1.0f;
-        defenseMultiplier = 1.0f;
+        Reset();
     }
 
     public void UpdateOrderIndex(int _index) => OrderIndex = _index;
@@ -138,8 +128,7 @@ public class UnitData
         TempAttackMultiplier = 0f;
         tempDefenseMultiplier = 0f;
 
-        foreach (KeyValuePair<StatusType, int> _status in statuses) statuses[_status.Key] = 0;
-
+        foreach (StatusType _status in Enum.GetValues(typeof(StatusType))) statuses[_status] = 0;
     }
 
     public void StatusUpdate()
@@ -165,16 +154,12 @@ public class UnitData
         if (temporary) TempAttackMultiplier += adjustment;
         else AttackMultiplier += adjustment;
     }
-
     public void AdjustDefense(float adjustment, bool temporary)
     {
         if (temporary) tempDefenseMultiplier += adjustment;
         else defenseMultiplier += adjustment;
     }
-
     public void GainStatus(int stacks, StatusType status) => statuses[status] += stacks;
-
     public int GetStatusStacks(StatusType status) => statuses[status];
-
     public void ClearStatus(StatusType status) => statuses[status] = 0;
 }

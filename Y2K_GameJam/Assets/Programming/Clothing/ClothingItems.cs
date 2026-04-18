@@ -35,10 +35,9 @@ public class ClothingData : ScriptableObject
     [field: SerializeField] public int Steps { get; private set; }
     [SerializeReference, SR] private List<ClothingEffect> Effects;
 
-    public IEnumerator Activate(Unit _originUnit, EncounterContext _context)
+    public void Activate(Unit _originUnit, EncounterContext _context)
     {
-        foreach (ClothingEffect effect in Effects)
-            yield return _originUnit.StartCoroutine(effect.ActivateEffect(_originUnit, _context));
+        foreach (ClothingEffect effect in Effects) effect.ActivateEffect(_originUnit, _context);
     }
 }
 

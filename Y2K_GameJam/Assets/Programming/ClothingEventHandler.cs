@@ -72,7 +72,7 @@ public class ClothingEventHandler
 
             if (_unit.Data.IsDead || !_item.IsReady) continue;
 
-            yield return _unit.StartCoroutine(_item.Data.Activate(_unit, _context));
+            _item.Data.Activate(_unit, _context);
             _item.ResetSteps();
         }
 
