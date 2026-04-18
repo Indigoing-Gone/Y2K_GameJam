@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShopSlot : MonoBehaviour
 {
-    public Action<ClothingData> OnShopSlotSelected;
+    public event Action<ClothingData> OnShopSlotSelected;
 
     [Header("Shop Slot Info")]
     [SerializeField] private ClothingData clothingData;

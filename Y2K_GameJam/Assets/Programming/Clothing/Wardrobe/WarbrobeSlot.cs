@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WardrobeSlot : MonoBehaviour
 {
-    static public Action<int, ClothingSlot, Unit> OnShiftingWardrobe;
+    static public event Action<int, ClothingSlot, Unit> OnShiftingWardrobe;
 
     [SerializeField] private ClothingSlot clothingSlot;
     private Button[] buttons;

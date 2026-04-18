@@ -62,7 +62,7 @@ public class Unit : MonoBehaviour
 [Serializable]
 public class UnitData
 {
-    public Action<UnitData> OnDeath;
+    public event Action<UnitData> OnDeath;
 
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public int OrderIndex { get; private set; }

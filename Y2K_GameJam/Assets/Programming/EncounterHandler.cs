@@ -38,7 +38,7 @@ public class EncounterContext
 
 public class EncounterHandler : MonoBehaviour
 {
-    static public Action<EncounterState> OnEncounterStateChanged;
+    public static event Action<EncounterState> OnEncounterStateChanged;
 
     private EncounterContext encounterContext;
     private ClothingEventHandler clothingEventHandler;

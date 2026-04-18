@@ -712,6 +712,7 @@ GameObject:
   - component: {fileID: 6339692297213410095}
   - component: {fileID: 4521857721227996190}
   - component: {fileID: 3582200262935964466}
+  - component: {fileID: 7785197283495188312}
   m_Layer: 0
   m_Name: ClothingItemSlot
   m_TagString: Untagged
@@ -807,7 +808,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e61767249eb9f70a496128a0426412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquippedClothingSlotVisuals
-  clothingSlot: 0
+  <ClothingSlot>k__BackingField: 0
+--- !u!114 &7785197283495188312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417151278413211685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7910d3d3b22bb6d89acbab573dfed69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tooltip
+  <TooltipData>k__BackingField:
+    Text: 
+    Position: {x: 0, y: 0, z: 0}
+  Offset: {x: 0, y: 0, z: 0}
 --- !u!1 &8877984312458781727
 GameObject:
   m_ObjectHideFlags: 0

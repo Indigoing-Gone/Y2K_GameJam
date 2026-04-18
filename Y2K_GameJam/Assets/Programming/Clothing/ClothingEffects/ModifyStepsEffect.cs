@@ -7,7 +7,7 @@ using SerializeReferenceEditor;
 [Serializable, SRName("ModifySteps")]
 public class ModifyStepsEffect : ClothingEffect
 {
-    static public Action<Unit, ClothingItem> OnModifiedClothingItemReady;
+    public static event Action<Unit, ClothingItem> OnModifiedClothingItemReady;
 
     [SerializeField] public int stepModification;
 

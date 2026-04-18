@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShopHandler : MonoBehaviour
 {
-    public Action OnShoppingEnded;
+    public event Action OnShoppingEnded;
 
     [SerializeField] private Wardrobe wardrobe;
 
