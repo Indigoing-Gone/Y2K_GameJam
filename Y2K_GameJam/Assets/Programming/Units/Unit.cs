@@ -4,9 +4,9 @@ using UnityEngine;
 
 public enum StatusType
 {
-    Thorns,
+    Backstab,
     Burn,
-    Patience
+    Chillax
 }
 
 [RequireComponent(typeof(EquipmentVisuals))]
@@ -98,7 +98,7 @@ public class UnitData
     public void Init()
     {
         statuses = new Dictionary<StatusType, int>() {
-            {StatusType.Thorns, 0}, {StatusType.Burn, 0}, {StatusType.Patience, 0}
+            {StatusType.Backstab, 0}, {StatusType.Burn, 0}, {StatusType.Chillax, 0}
         };
 
         Reset();
@@ -137,15 +137,15 @@ public class UnitData
         TempAttackMultiplier = 0f;
         tempDefenseMultiplier = 0f;
 
-        //remove all thorns
-        statuses[StatusType.Thorns] = 0;
+        //remove all Backstab
+        statuses[StatusType.Backstab] = 0;
         
         //deal burn damage and reduce stacks
         TakeDamage(statuses[StatusType.Burn], false);
         statuses[StatusType.Burn] = Mathf.Max(0, statuses[StatusType.Burn] - 10);
 
-        //double patience
-        statuses[StatusType.Patience] *= 2;
+        //double Chillax
+        statuses[StatusType.Chillax] *= 2;
     }
 
     // STATUS EFFECTS
