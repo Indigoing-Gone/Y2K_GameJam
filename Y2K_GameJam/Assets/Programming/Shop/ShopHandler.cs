@@ -12,12 +12,13 @@ public class ShopHandler : MonoBehaviour
     [Header("Shop Slots")]
     [SerializeField] private RectTransform shopPanel;
     private GridLayoutGroup shopGrid;
-
     private List<ShopSlot> shopSlots;
     [SerializeField] private ShopSlot shopSlotPrefab;
     [SerializeField] int ShopSlotCount;
     [SerializeField] private int allowedSelections;
     private int currentSelections;
+
+    private List<ClothingData> currentClothingPool;
     
     [Header("Shop Settings")]
     [SerializeField] private List<ClothingData> availableClothingItems;
@@ -44,10 +45,14 @@ public class ShopHandler : MonoBehaviour
         }
 
         shopPanel.gameObject.SetActive(false);
+
+        currentClothingPool = new List<ClothingData>();
     }
 
     public void SetupShop()
     {
+        currentClothingPool.Clear();
+
         shopPanel.gameObject.SetActive(true);
         //foreach (ShopSlot _slot in shopSlots) _slot.gameObject.SetActive(true);
         LayoutRebuilder.ForceRebuildLayoutImmediate(shopPanel);
@@ -60,9 +65,11 @@ public class ShopHandler : MonoBehaviour
                 continue;
             }
             
+            
             int _randomIndex = UnityEngine.Random.Range(0, availableClothingItems.Count);
             ClothingData _data = availableClothingItems[_randomIndex];
             availableClothingItems.RemoveAt(_randomIndex);
+            currentClothingPool.Add(_data);
 
             _slot.UpdateData(_data);
         }
@@ -76,9 +83,11 @@ public class ShopHandler : MonoBehaviour
 
         currentSelections--;
         wardrobe.AddClothingItem(new ClothingItem(data));
+        currentClothingPool.Remove(data);
 
         if (currentSelections <= 0)
         {
+            foreach(ClothingData _data in currentClothingPool) availableClothingItems.Add(_data);
             shopPanel.gameObject.SetActive(false);
             OnShoppingEnded?.Invoke();
         }
