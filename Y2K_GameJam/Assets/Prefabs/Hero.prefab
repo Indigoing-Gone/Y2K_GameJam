@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2853637245087681655}
   - component: {fileID: 8897234824065721995}
   m_Layer: 0
-  m_Name: Silo_10
+  m_Name: Silhouette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,11 +716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6038070731320021044, guid: 61f596ad77e729b4c8ce7969f0f099ab, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 6038070731320021044, guid: 61f596ad77e729b4c8ce7969f0f099ab, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 500
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 6038070731320021044, guid: 61f596ad77e729b4c8ce7969f0f099ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -756,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6038070731320021044, guid: 61f596ad77e729b4c8ce7969f0f099ab, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6038070731320021044, guid: 61f596ad77e729b4c8ce7969f0f099ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

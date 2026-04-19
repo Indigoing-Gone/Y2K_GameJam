@@ -494,7 +494,7 @@ MonoBehaviour:
   heroes:
   - {fileID: 1495127005}
   monsterEncounters:
-  - {fileID: 11400000, guid: 073b8c6e33183ec928419dfd59545ea4, type: 2}
+  - {fileID: 11400000, guid: 411a7e1d32acf5948b3a73dce49bfd55, type: 2}
 --- !u!114 &617181292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,6 +1762,22 @@ PrefabInstance:
       propertyPath: <ClothingSlot>k__BackingField
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1165320507827481504, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165320507827481504, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165320507827481504, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165320507827481504, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2176406008596655746, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
       propertyPath: <ClothingSlot>k__BackingField
       value: 2
@@ -1773,6 +1789,22 @@ PrefabInstance:
     - target: {fileID: 2295223698517069342, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778918242008520325, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778918242008520325, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778918242008520325, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778918242008520325, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3054945025530335055, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
       propertyPath: m_Name
@@ -1809,6 +1841,22 @@ PrefabInstance:
     - target: {fileID: 3864542446534652206, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930512844062805153, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930512844062805153, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930512844062805153, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930512844062805153, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5291076834586357141, guid: ab44936437f1f962ab45e489ea0b07cc, type: 3}
       propertyPath: m_IsActive

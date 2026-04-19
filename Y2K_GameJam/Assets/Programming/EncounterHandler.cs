@@ -166,8 +166,10 @@ public class EncounterHandler : MonoBehaviour
     private void StepAllUnits()
     {
         //Get ready clothing items from each unit and enqueue corresponding clothing events
-        foreach (Unit _unit in battleUnits)
+        List<Unit> _safeBattleUnits = new(battleUnits);
+        foreach (Unit _unit in _safeBattleUnits)
         {
+            if (_unit == null) continue;
             List<ClothingItem> readyClothingItems = _unit.StepEquipment();
             _unit.Data.StatusUpdate();
             foreach (ClothingItem _item in readyClothingItems) clothingEventHandler.EnqueueClothingEvent(_unit, _item);
