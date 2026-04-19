@@ -9,7 +9,7 @@ public class Monster : Unit
     protected override void Awake()
     {
         base.Awake();
-        Width = GetComponent<SpriteRenderer>().bounds.size.x;
+        Width = GetComponent<BoxCollider2D>().size.x;
     }
 
     protected override void Start()
