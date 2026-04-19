@@ -15,4 +15,5 @@ MonoBehaviour:
   <MaxEncounters>k__BackingField: 3
   <Encounters>k__BackingField:
   - {fileID: 11400000, guid: bc3a49befa916324a8c54a714c8ef2ee, type: 2}
+  - {fileID: 11400000, guid: 2295826b0433e2040b6913c3bdb7de29, type: 2}
   - {fileID: 11400000, guid: bf77698f66e9d2549ae25a940e3de3fe, type: 2}

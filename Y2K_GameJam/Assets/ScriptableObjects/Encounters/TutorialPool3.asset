@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TutorialPool3
   m_EditorClassIdentifier: Assembly-CSharp::EncounterPool
   <MaxEncounters>k__BackingField: 1
-  <Encounters>k__BackingField: []
+  <Encounters>k__BackingField:
+  - {fileID: 11400000, guid: 5326e2f4d9fc41545a4a07cf8b0e27f7, type: 2}

@@ -500,6 +500,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3f18961cdf6ed4c499020697a530dd56, type: 2}
   - {fileID: 11400000, guid: cd6c27266e514e34da807a7981b935f6, type: 2}
   - {fileID: 11400000, guid: ec1b8e1fb13b837419fc541792ee2767, type: 2}
+  monsterEncounters: []
 --- !u!114 &617181292
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private List<Hero> heroes;
     [SerializeField] private List<EncounterPool> encountersPools;
-    private List<MonsterEncounter> monsterEncounters;
+    [SerializeField] private List<MonsterEncounter> monsterEncounters;
     private int pool, encountersGrabbed;
 
     void OnEnable()
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         MonsterEncounter _encounter = monsterEncounters[Random.Range(0, monsterEncounters.Count)];
         monsterEncounters.Remove(_encounter);
         encounterHandler.SetupEncounter(heroes, _encounter);
-//
+
         encountersGrabbed++;
         if (encountersGrabbed == encountersPools[pool].MaxEncounters)
         {
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     private void CopyEncounterPool()
     {
-        monsterEncounters = encountersPools[pool].Encounters;
+        monsterEncounters = new List<MonsterEncounter>(encountersPools[pool].Encounters);
     }
 
     public void StartEncounter()
