@@ -8,6 +8,66 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1702001704791997127, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702001704791997127, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702001704791997127, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702001704791997127, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Size.x
+      value: 32.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Size.y
+      value: 27.501219
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d25cb843d89adc34e865a5d296ce55aa, type: 3}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890352930712575430, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890352930712575430, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890352930712575430, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890352930712575430, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6510159967197274884, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: 'clothingData.Array.data[0]'
       value: 
@@ -19,6 +79,22 @@ PrefabInstance:
     - target: {fileID: 6510159967197274884, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: <Data>k__BackingField.<MaxHealth>k__BackingField
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458527205404991715, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458527205404991715, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458527205404991715, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458527205404991715, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8756438129742621073, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_Color.g
@@ -70,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9165776913076905538, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_Name
-      value: Accelerator 1
+      value: Accelerator
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

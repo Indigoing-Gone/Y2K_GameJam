@@ -8,6 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d25cb843d89adc34e865a5d296ce55aa, type: 3}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3160377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.r
+      value: 0.85849684
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4207
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4468
+      objectReference: {fileID: 0}
     - target: {fileID: 6510159967197274884, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: 'clothingData.Array.data[0]'
       value: 
@@ -74,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9165776913076905538, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_Name
-      value: Enhancer 1
+      value: Enhancer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

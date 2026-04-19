@@ -8,6 +8,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b3a4e92844da208b6ad8e7293439035c, type: 3}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618721317067675626, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1055053
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2256826
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0114
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7573
+      objectReference: {fileID: 0}
     - target: {fileID: 6510159967197274884, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: 'clothingData.Array.data[0]'
       value: 
@@ -21,12 +53,16 @@ PrefabInstance:
       value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8756438129742621073, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756438129742621073, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8756438129742621073, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_Color.r
-      value: 0.92549026
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8887916951743890197, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9165776913076905538, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_Name
-      value: Accelerator 4
+      value: Commander
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
