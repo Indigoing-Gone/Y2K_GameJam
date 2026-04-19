@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78310555, g: 1, b: 0.7688679, a: 1}
+  m_Color: {r: 0.20784314, g: 0.078431375, b: 0.12156863, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78310555, g: 1, b: 0.7688679, a: 1}
+  m_Color: {r: 0.6745098, g: 0.32941177, b: 0.31764707, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1886,7 +1886,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gain 2 clotheing items from the shop before each encounter. One clothing
+  m_text: 'Gain 2 clothing items from the shop before each encounter. One clothing
     item can be worn on  each the head, torso, legs, and feet. Each item has a unique
     ability that triggers after its step counter reaches 0.
 
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6461004, g: 0.6367924, b: 1, a: 1}
+  m_Color: {r: 0.68235296, g: 0.39607844, b: 0.49803922, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
