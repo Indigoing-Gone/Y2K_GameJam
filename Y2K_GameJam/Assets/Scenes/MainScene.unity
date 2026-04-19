@@ -496,6 +496,10 @@ MonoBehaviour:
   encountersPools:
   - {fileID: 11400000, guid: bff89b3dd0a80b64b98c23614bc5b2c1, type: 2}
   - {fileID: 11400000, guid: 941fe507c8dcb444d86e48fa5a8f436b, type: 2}
+  - {fileID: 11400000, guid: 7e1ce8f3ab95fe6409842825e1d275fb, type: 2}
+  - {fileID: 11400000, guid: 3f18961cdf6ed4c499020697a530dd56, type: 2}
+  - {fileID: 11400000, guid: cd6c27266e514e34da807a7981b935f6, type: 2}
+  - {fileID: 11400000, guid: ec1b8e1fb13b837419fc541792ee2767, type: 2}
   monsterEncounters: []
 --- !u!114 &617181292
 MonoBehaviour:
@@ -1157,10 +1161,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: SLAY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
+  m_sharedMaterial: {fileID: 1197442766912020547, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1184,13 +1188,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1538,8 +1542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 474.625, y: 87.25}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 536, y: 601.48083}
+  m_SizeDelta: {x: 198.7, y: 110.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1599388336
 MonoBehaviour:
@@ -1617,7 +1621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d89af15452f7ed7ca92202645bc6f374, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1626,7 +1630,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 5
 --- !u!222 &1599388338
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1878,39 +1882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfcbd3d2789d98ae1933a23aadacd158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wardrobe
-  startingClothingItems:
-  - {fileID: 11400000, guid: 35838b67d7891884db0aec42c232bda6, type: 2}
-  - {fileID: 11400000, guid: c50109111809d29429e29742ecda13a1, type: 2}
-  - {fileID: 11400000, guid: 791c6a6fda05d384987de7fa7375cce0, type: 2}
-  - {fileID: 11400000, guid: 03955b30b80060f449cd0f350a6c4f63, type: 2}
-  - {fileID: 11400000, guid: 16a54a7fe3e5c4049834d1e1e876d14d, type: 2}
-  - {fileID: 11400000, guid: dde30b37a2512814bb40974ba9842c86, type: 2}
-  - {fileID: 11400000, guid: d2bf8b3372a40684b91b44d538c43143, type: 2}
-  - {fileID: 11400000, guid: f7fdded475fbd4348ba6ee26950f6327, type: 2}
-  - {fileID: 11400000, guid: 9db2b348eb601294f971bc68ce1a1f1e, type: 2}
-  - {fileID: 11400000, guid: 90677f94787e57a4390e623833fcadfe, type: 2}
-  - {fileID: 11400000, guid: 2b2e4048281ce2546a229ed3007552dd, type: 2}
-  - {fileID: 11400000, guid: 6d801cdd48433a94dab18ed73a5c695b, type: 2}
-  - {fileID: 11400000, guid: 5a0d4dbe62523cd4c8c6c6492fc482a2, type: 2}
-  - {fileID: 11400000, guid: d20da2774374f89478a2b8373c148415, type: 2}
-  - {fileID: 11400000, guid: f0ac35f3fef459242ad2e992c6e88290, type: 2}
-  - {fileID: 11400000, guid: 6d7a76b80ab011545baa0eecd425bcc5, type: 2}
-  - {fileID: 11400000, guid: e8c578f0d47b4874593fd085ceb31a10, type: 2}
-  - {fileID: 11400000, guid: 762c99afdf587d844819f2876c2eedbb, type: 2}
-  - {fileID: 11400000, guid: 6285646c8f2b36742af084bf0e6abf9a, type: 2}
-  - {fileID: 11400000, guid: 6a0a67b61aee9184292e6eb21d110e09, type: 2}
-  - {fileID: 11400000, guid: 5e3c8cb92abe6664cad094623f874ab6, type: 2}
-  - {fileID: 11400000, guid: b9106cf4691696f4c9bacd00f538394e, type: 2}
-  - {fileID: 11400000, guid: e3a2cd3e60034b54bb89217b7f4478b4, type: 2}
-  - {fileID: 11400000, guid: 23b6aaf9c72451b458bf3c43d5aee1cd, type: 2}
-  - {fileID: 11400000, guid: e455974ee9ac95548ba991c574277f0f, type: 2}
-  - {fileID: 11400000, guid: c3eaa349075b12e4c813f94d2363c005, type: 2}
-  - {fileID: 11400000, guid: bf702e4b6995fd74890958a8fbffc8e4, type: 2}
-  - {fileID: 11400000, guid: 527a3abf377b0a443885927b83d97fd9, type: 2}
-  - {fileID: 11400000, guid: dae280f8920f1ec4fbef59b4771d5ebe, type: 2}
-  - {fileID: 11400000, guid: b614f76774f17fb49a6e794b332c83e0, type: 2}
-  - {fileID: 11400000, guid: 2bb518599211630439645ddad7c8164a, type: 2}
-  - {fileID: 11400000, guid: 9946eec3660882148a0d8f2caa121c2d, type: 2}
+  startingClothingItems: []
 --- !u!4 &2067200172
 Transform:
   m_ObjectHideFlags: 0
