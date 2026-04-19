@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: f56a1579507a8cf4190cb1062c8b7f58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3828758079090306445
+    second: Tamagotchi_0
+  - first:
+      213: 2489481880563562003
+    second: Tamagotchi_1
+  - first:
+      213: -2000960458197867361
+    second: Tamagotchi_2
+  - first:
+      213: -2544618257388519954
+    second: Tamagotchi_3
+  - first:
+      213: 8754361117992742082
+    second: Tamagotchi_4
+  - first:
+      213: 2933394450842962377
+    second: Tamagotchi_5
+  - first:
+      213: 1717835745351198409
+    second: Tamagotchi_6
+  - first:
+      213: 6272098377210541828
+    second: Tamagotchi_7
+  - first:
+      213: 241188216250154063
+    second: Tamagotchi_8
+  - first:
+      213: 8720313945561513437
+    second: Tamagotchi_9
+  - first:
+      213: -3962534438575677402
+    second: Tamagotchi_10
+  - first:
+      213: 5919009902523578235
+    second: Tamagotchi_11
+  - first:
+      213: -7582580240881137164
+    second: Tamagotchi_12
+  - first:
+      213: 40834936178373491
+    second: Tamagotchi_13
+  - first:
+      213: 5545625787451819492
+    second: Tamagotchi_14
+  - first:
+      213: 6265839071911108347
+    second: Tamagotchi_15
+  - first:
+      213: 8307207144094430954
+    second: Tamagotchi_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tamagotchi_0
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 2162
+        width: 59
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3725aec00d48ddac0800000000000000
+      internalID: -3828758079090306445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 2879
+        height: 2750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31633cd949a6c8220800000000000000
+      internalID: 2489481880563562003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_2
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 2378
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94638790192b34e0800000000000000
+      internalID: -2000960458197867361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 2380
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed32674d23bfacd0800000000000000
+      internalID: -2544618257388519954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 2383
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cce271ed0dbd7970800000000000000
+      internalID: 8754361117992742082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_5
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 2381
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9c89416b285b820800000000000000
+      internalID: 2933394450842962377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_6
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 2381
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c66028428af6d710800000000000000
+      internalID: 1717835745351198409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_7
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2389
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40730f93e38fa0750800000000000000
+      internalID: 6272098377210541828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_8
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2394
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cb991a76fd85300800000000000000
+      internalID: 241188216250154063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_9
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 2399
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd341fc457c40970800000000000000
+      internalID: 8720313945561513437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_10
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 2402
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620e17a2cef3209c0800000000000000
+      internalID: -3962534438575677402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_11
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 2405
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b77ffe5652c842250800000000000000
+      internalID: 5919009902523578235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_12
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 2408
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f94265f17345c690800000000000000
+      internalID: -7582580240881137164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_13
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 2411
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37376597823119000800000000000000
+      internalID: 40834936178373491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_14
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2416
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5cf4e854506fc40800000000000000
+      internalID: 5545625787451819492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_15
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1262
+        width: 92
+        height: 831
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe5605207bb4f650800000000000000
+      internalID: 6265839071911108347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_16
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1178
+        width: 6
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6f55352e0294370800000000000000
+      internalID: 8307207144094430954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tamagotchi_0: -3828758079090306445
+      Tamagotchi_1: 2489481880563562003
+      Tamagotchi_10: -3962534438575677402
+      Tamagotchi_11: 5919009902523578235
+      Tamagotchi_12: -7582580240881137164
+      Tamagotchi_13: 40834936178373491
+      Tamagotchi_14: 5545625787451819492
+      Tamagotchi_15: 6265839071911108347
+      Tamagotchi_16: 8307207144094430954
+      Tamagotchi_2: -2000960458197867361
+      Tamagotchi_3: -2544618257388519954
+      Tamagotchi_4: 8754361117992742082
+      Tamagotchi_5: 2933394450842962377
+      Tamagotchi_6: 1717835745351198409
+      Tamagotchi_7: 6272098377210541828
+      Tamagotchi_8: 241188216250154063
+      Tamagotchi_9: 8720313945561513437
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
