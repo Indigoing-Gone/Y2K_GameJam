@@ -52,6 +52,7 @@ public class Unit : MonoBehaviour
     {
         Data.Init();
         healthBar.SetMaxValue(Data.MaxHealth);
+        healthBar.UpdateValue(Data.Health);
     }
 
     protected void UpdateVisuals(ClothingSlot _slot, ClothingItem _item)
