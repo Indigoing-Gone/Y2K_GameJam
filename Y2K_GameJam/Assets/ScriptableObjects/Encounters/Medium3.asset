@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42380b0a8cbf64bc983af65ee38ed79f, type: 3}
+  m_Name: Medium3
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterEncounter
+  <Monsters>k__BackingField:
+  - {fileID: 5117974428489297599, guid: 36b3ef8ffd6c7fb4e922ac8da8331d2f, type: 3}
+  - {fileID: 4800023612722443641, guid: d196417fa9281ec4bbcbf848e7d07ad1, type: 3}
+  - {fileID: 4800023612722443641, guid: 08e1b3cc839916240bad5b085710400d, type: 3}

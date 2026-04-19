@@ -13,12 +13,28 @@ MonoBehaviour:
   m_Name: TAtkAtkSlf
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: 
-  <Slot>k__BackingField: 0
-  <Sprite>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: Attack for 35 damage and attack self for 15 damage.
+  <Slot>k__BackingField: 2
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 5a341a53bd0fe50b5bff443c67fe86f5, type: 3}
   <Priority>k__BackingField: 1
-  <Steps>k__BackingField: 0
-  Effects: []
+  <Steps>k__BackingField: 4
+  Effects:
+  - rid: 6450501992540799072
+  - rid: 6450501992540799073
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6450501992540799072
+      type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        damage: 35
+    - rid: 6450501992540799073
+      type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 0
+        damage: 15

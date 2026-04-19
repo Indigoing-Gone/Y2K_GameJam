@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42380b0a8cbf64bc983af65ee38ed79f, type: 3}
+  m_Name: Boss1
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterEncounter
+  <Monsters>k__BackingField:
+  - {fileID: 4510629709409039399, guid: 273cecba684268844a07c9ff685f1d60, type: 3}
+  - {fileID: 4800023612722443641, guid: d196417fa9281ec4bbcbf848e7d07ad1, type: 3}
+  - {fileID: 4510629709409039399, guid: 8cf2f13d0e45c6140a085cc0d9e859b0, type: 3}
+  - {fileID: 4510629709409039399, guid: 372702ec8ba7677499fe8da232ac5565, type: 3}
+  - {fileID: 8620896420909734256, guid: 2465ce7446da5724a92ae6bc5bc95e41, type: 3}

@@ -13,12 +13,40 @@ MonoBehaviour:
   m_Name: HBckStbAtkUpDefDown
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: 
-  <Slot>k__BackingField: 0
-  <Sprite>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: Gain Backstab 7 and increase damage dealt and taken
+    by 30% until end of step.
+  <Slot>k__BackingField: 1
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 3d01221f2d10b9b2f9015e340ac7717c, type: 3}
   <Priority>k__BackingField: 1
-  <Steps>k__BackingField: 0
-  Effects: []
+  <Steps>k__BackingField: 1
+  Effects:
+  - rid: 6450501992540799061
+  - rid: 6450501992540799062
+  - rid: 6450501992540799063
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6450501992540799061
+      type: {class: StatusEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 0
+        status: 0
+        stacks: 7
+    - rid: 6450501992540799062
+      type: {class: AdjustAtkEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 0
+        adjustment: 0.3
+        temporary: 1
+    - rid: 6450501992540799063
+      type: {class: AdjustDefEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 0
+        adjustment: -0.3
+        temporary: 1

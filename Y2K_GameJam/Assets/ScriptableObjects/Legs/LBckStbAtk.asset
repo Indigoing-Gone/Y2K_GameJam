@@ -13,12 +13,29 @@ MonoBehaviour:
   m_Name: LBckStbAtk
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: 
-  <Slot>k__BackingField: 0
-  <Sprite>k__BackingField: {fileID: 0}
+  <Description>k__BackingField: Gain Backstab 15. Attack for 15 damage.
+  <Slot>k__BackingField: 3
+  <Sprite>k__BackingField: {fileID: 21300000, guid: d9ba2d27aa15d6f0b82faa64edcb7ad3, type: 3}
   <Priority>k__BackingField: 1
-  <Steps>k__BackingField: 0
-  Effects: []
+  <Steps>k__BackingField: 3
+  Effects:
+  - rid: 6450501992540799075
+  - rid: 6450501992540799076
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6450501992540799075
+      type: {class: StatusEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        targetPosition: 0
+        TargetSlot: 0
+        status: 0
+        stacks: 15
+    - rid: 6450501992540799076
+      type: {class: AttackEffect, ns: , asm: Assembly-CSharp}
+      data:
+        targetType: 2
+        targetPosition: 0
+        TargetSlot: 0
+        damage: 15
