@@ -876,7 +876,7 @@ MonoBehaviour:
   <TooltipData>k__BackingField:
     Text: 
     Position: {x: 0, y: 0, z: 0}
-  Offset: {x: 0, y: 0, z: 0}
+  Offset: {x: 0, y: 1, z: 0}
 --- !u!61 &4128720241050741880
 BoxCollider2D:
   m_ObjectHideFlags: 0

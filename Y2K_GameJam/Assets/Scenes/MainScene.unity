@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.80784315, g: 0.34117648, b: 0.28235295, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -516,7 +516,7 @@ MonoBehaviour:
   betweenStepInterval: 1
   betweenClothingEventInterval: 1
   monsterSpawnPoint: {fileID: 869375160}
-  monsterSpawnSpacing: 1
+  monsterSpawnSpacing: 0.3
 --- !u!114 &617181293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,7 +961,7 @@ Transform:
   m_GameObject: {fileID: 869375159}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1001,8 +1001,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25.9}
-  m_SizeDelta: {x: 162.81, y: 58.13}
+  m_AnchoredPosition: {x: 0, y: -26.206177}
+  m_SizeDelta: {x: 267.5, y: 58.13}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1055090799
 MonoBehaviour:
@@ -1026,8 +1026,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Select 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
+  m_sharedMaterial: {fileID: 1197442766912020547, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1051,8 +1051,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60.78
+  m_fontSizeBase: 60.78
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

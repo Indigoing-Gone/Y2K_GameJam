@@ -10,6 +10,7 @@ public class Monster : Unit
     {
         base.Awake();
         Width = GetComponent<BoxCollider2D>().size.x;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 
     protected override void Start()
