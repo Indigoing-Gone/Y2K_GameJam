@@ -12,6 +12,6 @@ public class DataText : MonoBehaviour
 
     public void UpdateData(float _value, float _tempValue)
     {
-        dataText.text = $"{_value * 100}%\n{_tempValue * 100}%";
+        dataText.text = $"{(int)(_value * 100)}%\n{(int)(_tempValue * 100)}%";
     }
 }

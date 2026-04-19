@@ -13,7 +13,7 @@ public class StatusIcon : MonoBehaviour
 
     public void UpdateStacks(int stackCount)
     {
-        if (stackCount > 1)
+        if (stackCount > 0)
         {
             stacks.text = stackCount.ToString();
             gameObject.SetActive(true);

@@ -202,7 +202,7 @@ public class UnitData
     {
         statuses[status] += stacks;
         statuses[status] = Mathf.Max(0, statuses[status]);
-        OnStatusChanged?.Invoke(status, stacks);
+        OnStatusChanged?.Invoke(status, statuses[status]);
     }
     public int GetStatusStacks(StatusType status) => statuses[status];
     public void ClearStatus(StatusType status)

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,12 +14,14 @@ public class ShopSlot : MonoBehaviour
     
     private Tooltip tooltip;
     private Image clothingImage;
+    private TextMeshPro clothingSteps;
     private AspectRatioFitter clothingRatio;
 
     void Awake()
     {
         tooltip = GetComponent<Tooltip>();
         clothingImage = clothingImageObject.GetComponent<Image>();
+        clothingSteps = clothingImageObject.GetComponentInChildren<TextMeshPro>();
         clothingRatio = clothingImageObject.GetComponent<AspectRatioFitter>();
     }
 
@@ -28,18 +31,20 @@ public class ShopSlot : MonoBehaviour
 
         if(_data == null) 
         {
-            clothingImage.sprite = null;
+            clothingImage.gameObject.SetActive(false);
             clothingRatio.aspectRatio = 1f;
             return;
         }
         else if(_data.Sprite == null)
         {
-            clothingImage.sprite = null;
+            clothingImage.gameObject.SetActive(false);
             clothingRatio.aspectRatio = 1f;
         }
         else
         {
+            clothingImage.gameObject.SetActive(true);
             clothingImage.sprite = _data.Sprite;
+            clothingSteps.text = _data.Steps.ToString();
             clothingRatio.aspectRatio = _data.Sprite.bounds.size.x / _data.Sprite.bounds.size.y;
         }
 
