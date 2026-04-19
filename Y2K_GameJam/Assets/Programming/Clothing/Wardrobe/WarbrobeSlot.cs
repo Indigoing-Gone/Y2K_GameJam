@@ -19,7 +19,7 @@ public class WardrobeSlot : MonoBehaviour
 
     void OnDisable()
     {
-        //EncounterHandler.OnEncounterStateChanged -= ActivateWardrobeSlot;
+        EncounterHandler.OnEncounterStateChanged -= ActivateWardrobeSlot;
     }
 
     void Awake()
