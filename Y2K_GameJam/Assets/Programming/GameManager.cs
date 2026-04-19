@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(EncounterHandler))]
 public class GameManager : MonoBehaviour
@@ -34,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        ChooseEncounter();
+        shopHandler.SetupShop();
     }
 
     private void ChooseEncounter()
@@ -48,7 +50,8 @@ public class GameManager : MonoBehaviour
         {
             encountersGrabbed = 0;
             pool++;
-            CopyEncounterPool();
+            if (pool != encountersPools.Count)
+                CopyEncounterPool();
         }
     }
 
@@ -66,8 +69,24 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"Encounter ended with success: {_success}");
 
+        if (!_success)
+        {
+            Invoke(nameof(GameFail), 2.0f);
+            return;
+        }
+
+        if (_success && pool == encountersPools.Count)
+        {
+            Invoke(nameof(GameWin), 2.0f);
+            return;
+        }
+
         foreach (Hero hero in heroes) hero.Data.Reset();
 
         shopHandler.SetupShop();
     }
+
+    private void GameFail() => SceneManager.LoadScene("EndLose");
+    
+    private void GameWin() => SceneManager.LoadScene("EndWin");
 }
