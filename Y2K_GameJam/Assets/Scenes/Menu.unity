@@ -528,7 +528,7 @@ MonoBehaviour:
   m_text: Close Tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 1197442766912020547, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1200,7 +1200,7 @@ RectTransform:
   m_GameObject: {fileID: 1104843504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1451083574}
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_text: Close Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 1197442766912020547, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1864,7 +1864,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 750, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1566882028
 MonoBehaviour:
@@ -1886,7 +1886,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Gain 2 clotheing items from the shop before each encounter. One clothing
+    item can be worn on  each the head, torso, legs, and feet. Each item has a unique
+    ability that triggers after its step counter reaches 0.
+
+    During an encounter,
+    you will fight enemies whose abilties also rely on step counters. Every few seconds,
+    all step counters are decreased, and any at 0 have their ability trigger.
+
+    Player
+    abilities trigger first from head to toe. Then monster abilties trigger left
+    to right. If an ability goes to 0 steps after it is passed, it will be triggered
+    regardless. Once an ability is triggered, its step counter resets.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
   m_sharedMaterial: {fileID: 1197442766912020547, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
@@ -1908,19 +1919,19 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2208,8 +2219,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 35}
+  m_SizeDelta: {x: 750, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1864638544
 MonoBehaviour:
@@ -2231,7 +2242,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Game Worm
+
+    Wynona McWhirter - Programming
+
+    Jes Wade - Content
+    and Gameplay Design
+
+    Glenn Wallace - Clothing Assets
+
+
+    Not Game Worm
+
+    Moon
+    Moon - Monster Design
+
+    Genevieve Lewis - UI Art
+
+    Penny Nocturna - Additional
+    Help
+
+    Jay! - Monster Design'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
   m_sharedMaterial: {fileID: 1197442766912020547, guid: 5ad6beea3a8503c4b850bbb6baa5974b, type: 2}
@@ -2253,20 +2284,20 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 33
+  m_fontSizeBase: 33
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
