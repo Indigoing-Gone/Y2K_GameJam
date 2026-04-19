@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: daeabf97620b68e44823325f5237828f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5050391556232007257
+    second: Tamagotchi_alt_2_0
+  - first:
+      213: -8190024752023638078
+    second: Tamagotchi_alt_2_1
+  - first:
+      213: -1288220405594993621
+    second: Tamagotchi_alt_2_2
+  - first:
+      213: 4282350500125043585
+    second: Tamagotchi_alt_2_3
+  - first:
+      213: 602784810938356948
+    second: Tamagotchi_alt_2_4
+  - first:
+      213: 2108088457834430309
+    second: Tamagotchi_alt_2_5
+  - first:
+      213: -1439811243718956167
+    second: Tamagotchi_alt_2_6
+  - first:
+      213: 1455767150868972548
+    second: Tamagotchi_alt_2_7
+  - first:
+      213: -6748064691122311617
+    second: Tamagotchi_alt_2_8
+  - first:
+      213: -9195383389538749169
+    second: Tamagotchi_alt_2_9
+  - first:
+      213: 664346686582674804
+    second: Tamagotchi_alt_2_10
+  - first:
+      213: -3132284927094038518
+    second: Tamagotchi_alt_2_11
+  - first:
+      213: -7613672499247995528
+    second: Tamagotchi_alt_2_12
+  - first:
+      213: 5549761515096853790
+    second: Tamagotchi_alt_2_13
+  - first:
+      213: -7463478008728928050
+    second: Tamagotchi_alt_2_14
+  - first:
+      213: -4267362574753621257
+    second: Tamagotchi_alt_2_15
+  - first:
+      213: 234848196647925331
+    second: Tamagotchi_alt_2_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_0
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 2162
+        width: 59
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1b82243a769e9b0800000000000000
+      internalID: -5050391556232007257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_1
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 2879
+        height: 2750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf69f171ef275e80800000000000000
+      internalID: -8190024752023638078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_2
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 2378
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2cc91ccd525f1ee0800000000000000
+      internalID: -1288220405594993621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 2380
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b6bab4717fd6b30800000000000000
+      internalID: 4282350500125043585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 2383
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d45bf387958d5800800000000000000
+      internalID: 602784810938356948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_5
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 2381
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56f7254884f614d10800000000000000
+      internalID: 2108088457834430309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_6
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 2381
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ba4826d43c40ce0800000000000000
+      internalID: -1439811243718956167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_7
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2389
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4044a3fb28ce33410800000000000000
+      internalID: 1455767150868972548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_8
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2394
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e6c4c8aee0a52a0800000000000000
+      internalID: -6748064691122311617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_9
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 2399
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05f305c68f636080800000000000000
+      internalID: -9195383389538749169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_10
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 2402
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475d775aacb383900800000000000000
+      internalID: 664346686582674804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_11
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 2405
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00ef315473e784d0800000000000000
+      internalID: -3132284927094038518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_12
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 2408
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875a92e633dc65690800000000000000
+      internalID: -7613672499247995528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_13
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 2411
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d4b7fa1b6b40d40800000000000000
+      internalID: 5549761515096853790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_14
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2416
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0c5c45b466c6890800000000000000
+      internalID: -7463478008728928050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_15
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1262
+        width: 92
+        height: 831
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa9304095847c4c0800000000000000
+      internalID: -4267362574753621257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tamagotchi_alt_2_16
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1178
+        width: 6
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3563759c039524300800000000000000
+      internalID: 234848196647925331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tamagotchi_alt_2_0: -5050391556232007257
+      Tamagotchi_alt_2_1: -8190024752023638078
+      Tamagotchi_alt_2_10: 664346686582674804
+      Tamagotchi_alt_2_11: -3132284927094038518
+      Tamagotchi_alt_2_12: -7613672499247995528
+      Tamagotchi_alt_2_13: 5549761515096853790
+      Tamagotchi_alt_2_14: -7463478008728928050
+      Tamagotchi_alt_2_15: -4267362574753621257
+      Tamagotchi_alt_2_16: 234848196647925331
+      Tamagotchi_alt_2_2: -1288220405594993621
+      Tamagotchi_alt_2_3: 4282350500125043585
+      Tamagotchi_alt_2_4: 602784810938356948
+      Tamagotchi_alt_2_5: 2108088457834430309
+      Tamagotchi_alt_2_6: -1439811243718956167
+      Tamagotchi_alt_2_7: 1455767150868972548
+      Tamagotchi_alt_2_8: -6748064691122311617
+      Tamagotchi_alt_2_9: -9195383389538749169
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
