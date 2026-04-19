@@ -11,6 +11,7 @@ public class ShopHandler : MonoBehaviour
 
     [Header("Shop Slots")]
     [SerializeField] private RectTransform shopPanel;
+    private GridLayoutGroup shopGrid;
 
     private List<ShopSlot> shopSlots;
     [SerializeField] private ShopSlot shopSlotPrefab;
@@ -33,10 +34,12 @@ public class ShopHandler : MonoBehaviour
 
     void Awake()
     {
+        shopGrid = shopPanel.GetComponentInChildren<GridLayoutGroup>();
+
         shopSlots = new List<ShopSlot>();
         for (int i = 0; i < ShopSlotCount; i++)
         {
-            ShopSlot _slotObj = Instantiate(shopSlotPrefab, shopPanel);
+            ShopSlot _slotObj = Instantiate(shopSlotPrefab, shopGrid.transform);
             shopSlots.Add(_slotObj);
         }
 

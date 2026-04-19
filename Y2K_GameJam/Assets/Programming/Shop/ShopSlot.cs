@@ -14,14 +14,14 @@ public class ShopSlot : MonoBehaviour
     
     private Tooltip tooltip;
     private Image clothingImage;
-    private TextMeshPro clothingSteps;
+    private TextMeshProUGUI clothingSteps;
     private AspectRatioFitter clothingRatio;
 
     void Awake()
     {
         tooltip = GetComponent<Tooltip>();
         clothingImage = clothingImageObject.GetComponent<Image>();
-        clothingSteps = clothingImageObject.GetComponentInChildren<TextMeshPro>();
+        clothingSteps = GetComponentInChildren<TextMeshProUGUI>();
         clothingRatio = clothingImageObject.GetComponent<AspectRatioFitter>();
     }
 
@@ -32,12 +32,14 @@ public class ShopSlot : MonoBehaviour
         if(_data == null) 
         {
             clothingImage.gameObject.SetActive(false);
+            clothingSteps.text = "-";
             clothingRatio.aspectRatio = 1f;
             return;
         }
         else if(_data.Sprite == null)
         {
             clothingImage.gameObject.SetActive(false);
+            clothingSteps.text = "-";
             clothingRatio.aspectRatio = 1f;
         }
         else
