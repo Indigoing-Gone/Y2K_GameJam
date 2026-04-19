@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: 
   <Description>k__BackingField: Gain Backstab 15. Attack for 15 damage.
   <Slot>k__BackingField: 3
-  <Sprite>k__BackingField: {fileID: 21300000, guid: d9ba2d27aa15d6f0b82faa64edcb7ad3, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 28d9db800095b5e4c874312ad22a1e73, type: 3}
   <Priority>k__BackingField: 1
   <Steps>k__BackingField: 3
   Effects:

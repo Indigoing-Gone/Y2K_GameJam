@@ -15,7 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: 
   <Description>k__BackingField: Attack for 50 damage.
   <Slot>k__BackingField: 1
-  <Sprite>k__BackingField: {fileID: 21300000, guid: d662e4bf4f130513293798fa9cef678e, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 4e0d18261d29ee2ddb87916318846c96, type: 3}
   <Priority>k__BackingField: 1
   <Steps>k__BackingField: 6
   Effects:
