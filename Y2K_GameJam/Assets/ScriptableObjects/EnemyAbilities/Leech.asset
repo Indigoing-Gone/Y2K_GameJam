@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Leech
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Leech
-  <Description>k__BackingField: Attack for 25 Damage. Heal for 15 Health.
+  <Description>k__BackingField: Slay for 25 Damage. Heal for 15 Health.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: 0}
   <Priority>k__BackingField: 1

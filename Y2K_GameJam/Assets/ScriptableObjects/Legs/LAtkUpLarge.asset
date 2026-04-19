@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LAtkUpLarge
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: Increase damage by 50% until end of turn.
+  <Description>k__BackingField: Increase Slay by 50% until end of turn.
   <Slot>k__BackingField: 3
   <Sprite>k__BackingField: {fileID: 21300000, guid: 3b0dce5d7bbfd58218467915f2a1d2e8, type: 3}
   <Priority>k__BackingField: 1

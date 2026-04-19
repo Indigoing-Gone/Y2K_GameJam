@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TDefUpAtkDown
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: Increase defense by 50% this step, but decrease damage
+  <Description>k__BackingField: Increase Bling by 50% this step, but decrease Slay
     by 25% this turn.
   <Slot>k__BackingField: 2
   <Sprite>k__BackingField: {fileID: 21300000, guid: 7eb84c2db4a166b3e97378eb86e8dd27, type: 3}

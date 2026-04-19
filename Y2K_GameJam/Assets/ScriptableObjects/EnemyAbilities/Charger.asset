@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Charger
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Charger
-  <Description>k__BackingField: Attack for 40 damage and gain Chillax 2.
+  <Description>k__BackingField: Slay for 40 damage and gain Chillax 2.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: 0}
   <Priority>k__BackingField: 1

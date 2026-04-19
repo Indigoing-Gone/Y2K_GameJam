@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Infector
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Infector
-  <Description>k__BackingField: Fast Fashion. Decrease the player's defense by 15%
+  <Description>k__BackingField: Fast Fashion. Decrease the player's Bling by 15%
     and give them Backstab 15 until end of step.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: 0}

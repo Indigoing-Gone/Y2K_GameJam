@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enhancer
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Enhancer
-  <Description>k__BackingField: 'Fast Fashion. Increase all monster damage by 15%
+  <Description>k__BackingField: 'Fast Fashion. Increase all monster''s Slay by 15%
     until the end of the step. '
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: -3365899965060384222, guid: 7c0f5f2efe8bda7539a90a4304ff0e47, type: 3}

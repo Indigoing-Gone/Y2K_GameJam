@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Beserker
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Beserker
-  <Description>k__BackingField: Fast Fashion. Attack for 35 damage. Decreases own
-    defense by 40% until end of step.
+  <Description>k__BackingField: Fast Fashion. Slay for 35 damage. Decreases own Bling
+    by 40% until end of step.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: 0}
   <Priority>k__BackingField: 0

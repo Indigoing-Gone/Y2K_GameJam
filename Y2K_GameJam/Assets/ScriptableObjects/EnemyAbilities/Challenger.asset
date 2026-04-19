@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Challenger
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Challenger
-  <Description>k__BackingField: Attack player for 25 damage. Decrease all step counters
+  <Description>k__BackingField: Slay player for 25 damage. Decrease all step counters
     on player items by 1.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: -3365899965060384222, guid: 7c0f5f2efe8bda7539a90a4304ff0e47, type: 3}

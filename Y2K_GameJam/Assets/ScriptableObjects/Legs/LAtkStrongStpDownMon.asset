@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LAtkStrongStpDownMon
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: Attack for 20 damage, but the target's step counter
+  <Description>k__BackingField: Slay for 20 damage, but the target's step counter
     decreases by 1.
   <Slot>k__BackingField: 3
   <Sprite>k__BackingField: {fileID: 21300000, guid: ed87453dde8a3574ca8a44f73ad9e854, type: 3}

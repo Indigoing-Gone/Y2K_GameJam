@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blight
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Blight
-  <Description>k__BackingField: Attack the player for 15 damage. Attack all monsters
+  <Description>k__BackingField: Slay the player for 15 damage. Slay all monsters
     for 7 damage.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: -3365899965060384222, guid: 7c0f5f2efe8bda7539a90a4304ff0e47, type: 3}

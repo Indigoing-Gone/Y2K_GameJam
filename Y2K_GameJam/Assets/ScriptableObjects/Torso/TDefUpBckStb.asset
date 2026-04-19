@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TDefUpBckStb
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: 
-  <Description>k__BackingField: Increase defense by 50% until end of step and gain
+  <Description>k__BackingField: Increase Bling by 50% until end of step and gain
     Backstab 20.
   <Slot>k__BackingField: 2
   <Sprite>k__BackingField: {fileID: 21300000, guid: ff5363300fcddb7969c29794fe422417, type: 3}

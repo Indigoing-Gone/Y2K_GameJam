@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Martyr
   m_EditorClassIdentifier: Assembly-CSharp::ClothingData
   <Name>k__BackingField: Martyr
-  <Description>k__BackingField: Attack for 40 damage. Attack self for 15 damage.
+  <Description>k__BackingField: Slay for 40 damage. Slay self for 15 damage.
   <Slot>k__BackingField: 1
   <Sprite>k__BackingField: {fileID: -3365899965060384222, guid: 7c0f5f2efe8bda7539a90a4304ff0e47, type: 3}
   <Priority>k__BackingField: 1
