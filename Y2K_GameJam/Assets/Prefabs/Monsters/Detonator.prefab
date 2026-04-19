@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.78
+      objectReference: {fileID: 0}
     - target: {fileID: 6510159967197274884, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: 'clothingData.Array.data[0]'
       value: 
@@ -54,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8887916951743890197, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8887916951743890197, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_LocalPosition.z

@@ -25,12 +25,24 @@ PrefabInstance:
       value: 0.69643027
       objectReference: {fileID: 0}
     - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5338
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.1568
+      value: 1.6555597
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.18692678
       objectReference: {fileID: 0}
     - target: {fileID: 5949801725572730176, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5907
+      value: -0.5098133
       objectReference: {fileID: 0}
     - target: {fileID: 6510159967197274884, guid: 73451177c15bf714cab93ad0e1732512, type: 3}
       propertyPath: 'clothingData.Array.data[0]'
