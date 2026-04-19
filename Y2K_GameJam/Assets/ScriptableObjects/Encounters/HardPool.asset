@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6959b138041c8459a2562bbd922581, type: 3}
+  m_Name: HardPool
+  m_EditorClassIdentifier: Assembly-CSharp::EncounterPool
+  <MaxEncounters>k__BackingField: 3
+  <Encounters>k__BackingField:
+  - {fileID: 11400000, guid: 0adffea7ad22a244a90ec8499e905b6e, type: 2}
+  - {fileID: 11400000, guid: a8129a6e4a0cd9b4c8377dac9f86c55e, type: 2}
+  - {fileID: 11400000, guid: fa35a047c398c3c448111737d25da14a, type: 2}

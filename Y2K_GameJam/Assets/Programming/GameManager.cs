@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     private ShopHandler shopHandler;
 
     [SerializeField] private List<Hero> heroes;
-    [SerializeField] private List<MonsterEncounter> monsterEncounters;
+    [SerializeField] private List<EncounterPool> encountersPools;
+    private List<MonsterEncounter> monsterEncounters;
+    private int pool, encountersGrabbed;
 
     void OnEnable()
     {
@@ -24,6 +26,10 @@ public class GameManager : MonoBehaviour
     {
         encounterHandler = GetComponent<EncounterHandler>();
         shopHandler = GetComponent<ShopHandler>();
+
+        pool = 0;
+        encountersGrabbed = 0;
+        CopyEncounterPool();
     }
 
     private void Start()
@@ -36,6 +42,19 @@ public class GameManager : MonoBehaviour
         MonsterEncounter _encounter = monsterEncounters[Random.Range(0, monsterEncounters.Count)];
         monsterEncounters.Remove(_encounter);
         encounterHandler.SetupEncounter(heroes, _encounter);
+//
+        encountersGrabbed++;
+        if (encountersGrabbed == encountersPools[pool].MaxEncounters)
+        {
+            encountersGrabbed = 0;
+            pool++;
+            CopyEncounterPool();
+        }
+    }
+
+    private void CopyEncounterPool()
+    {
+        monsterEncounters = encountersPools[pool].Encounters;
     }
 
     public void StartEncounter()
