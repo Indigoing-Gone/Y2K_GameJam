@@ -22,7 +22,7 @@ public class Tooltip : MonoBehaviour
     [field: SerializeField] public TooltipData TooltipData { get; private set; }
     [SerializeField] private Vector3 Offset;
 
-    void Awake() => SetTooltipPosition(transform.position);
+    void Start() => SetTooltipPosition(transform.position);
 
     public void SetTooltipText(string _text) => TooltipData.Text = _text;
     public void SetTooltipPosition(Vector3 _position) => TooltipData.Position = Camera.main.WorldToScreenPoint(_position + Offset);

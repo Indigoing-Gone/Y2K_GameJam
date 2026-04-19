@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e61767249eb9f70a496128a0426412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquippedClothingSlotVisuals
-  <ClothingSlot>k__BackingField: 0
+  <ClothingSlot>k__BackingField: 1
 --- !u!114 &5502149762111927083
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum StatusType
@@ -14,15 +15,20 @@ public class Unit : MonoBehaviour
 {
     [Header("Components")]
     [field: SerializeField] public UnitData Data { get; private set; }
-    [SerializeField] private Bar healthBar;
+    private Bar healthBar;
+    [SerializeField] private DataText attackMultiplierDataText;
+    [SerializeField] private DataText defenseMultiplierDataText;
     private Equipment equipment;
     private EquipmentVisuals equipmentVisuals;
+    [SerializeField] private StatusVisuals statusVisuals;
 
     private void OnEnable()
     {
         equipment.OnEquipmentChanged += UpdateVisuals;
         Data.OnDeath += HandleDeath;
         Data.OnHealthChanged += healthBar.UpdateValue;
+        Data.OnMultiplierChanged += UpdateMultiplierDataTexts;
+        Data.OnStatusChanged += statusVisuals.UpdateStatusEffect;
     }
 
     private void OnDisable()
@@ -30,6 +36,8 @@ public class Unit : MonoBehaviour
         equipment.OnEquipmentChanged -= UpdateVisuals;
         Data.OnDeath -= HandleDeath;
         Data.OnHealthChanged -= healthBar.UpdateValue;
+        Data.OnMultiplierChanged -= UpdateMultiplierDataTexts;
+        Data.OnStatusChanged -= statusVisuals.UpdateStatusEffect;
     }
 
     protected virtual void Awake()
@@ -37,6 +45,7 @@ public class Unit : MonoBehaviour
         equipment = new Equipment();
         equipmentVisuals = GetComponent<EquipmentVisuals>();
         healthBar = GetComponentInChildren<Bar>();
+        statusVisuals = GetComponentInChildren<StatusVisuals>();
     }
 
     protected virtual void Start()
@@ -48,6 +57,13 @@ public class Unit : MonoBehaviour
     protected void UpdateVisuals(ClothingSlot _slot, ClothingItem _item)
     {
         equipmentVisuals.UpdateVisuals(_slot, _item);
+    }
+
+    private void UpdateMultiplierDataTexts((float, float) values, bool isAttack)
+    {
+        if(attackMultiplierDataText == null || defenseMultiplierDataText == null) return;
+        if (isAttack) attackMultiplierDataText.UpdateData(values.Item1, values.Item2);
+        else defenseMultiplierDataText.UpdateData(values.Item1, values.Item2);
     }
 
     public List<ClothingItem> StepEquipment()
@@ -73,6 +89,8 @@ public class UnitData
 {
     public event Action<float> OnHealthChanged;
     public event Action<UnitData> OnDeath;
+    public event Action<(float, float), bool> OnMultiplierChanged; //bool = isAttackMultiplier
+    public event Action<StatusType, int> OnStatusChanged; //int = new stack count
 
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public int OrderIndex { get; private set; }
@@ -139,7 +157,10 @@ public class UnitData
         TempAttackMultiplier = 0f;
         tempDefenseMultiplier = 0f;
 
-        foreach (StatusType _status in Enum.GetValues(typeof(StatusType))) statuses[_status] = 0;
+        OnMultiplierChanged?.Invoke((AttackMultiplier, TempAttackMultiplier), true);
+        OnMultiplierChanged?.Invoke((defenseMultiplier, tempDefenseMultiplier), false);
+
+        foreach (StatusType _status in Enum.GetValues(typeof(StatusType))) ClearStatus(_status);
     }
 
     public void StatusUpdate()
@@ -148,15 +169,18 @@ public class UnitData
         TempAttackMultiplier = 0f;
         tempDefenseMultiplier = 0f;
 
+        OnMultiplierChanged?.Invoke((AttackMultiplier, TempAttackMultiplier), true);
+        OnMultiplierChanged?.Invoke((defenseMultiplier, tempDefenseMultiplier), false);
+
         //remove all Backstab
-        statuses[StatusType.Backstab] = 0;
-        
+        ClearStatus(StatusType.Backstab);
+
         //deal burn damage and reduce stacks
         TakeDamage(statuses[StatusType.Burn], false);
-        statuses[StatusType.Burn] = Mathf.Max(0, statuses[StatusType.Burn] - 5);
+        GainStatus(-5, StatusType.Burn);
 
         //double Chillax
-        statuses[StatusType.Chillax] *= 2;
+        GainStatus(statuses[StatusType.Chillax], StatusType.Chillax);
     }
 
     // STATUS EFFECTS
@@ -164,13 +188,26 @@ public class UnitData
     {
         if (temporary) TempAttackMultiplier += adjustment;
         else AttackMultiplier += adjustment;
+
+        OnMultiplierChanged?.Invoke((AttackMultiplier, TempAttackMultiplier), true);
     }
     public void AdjustDefense(float adjustment, bool temporary)
     {
         if (temporary) tempDefenseMultiplier += adjustment;
         else defenseMultiplier += adjustment;
+
+        OnMultiplierChanged?.Invoke((defenseMultiplier, tempDefenseMultiplier), false);
     }
-    public void GainStatus(int stacks, StatusType status) => statuses[status] += stacks;
+    public void GainStatus(int stacks, StatusType status)
+    {
+        statuses[status] += stacks;
+        statuses[status] = Mathf.Max(0, statuses[status]);
+        OnStatusChanged?.Invoke(status, stacks);
+    }
     public int GetStatusStacks(StatusType status) => statuses[status];
-    public void ClearStatus(StatusType status) => statuses[status] = 0;
+    public void ClearStatus(StatusType status)
+    {
+        statuses[status] = 0;
+        OnStatusChanged?.Invoke(status, 0);
+    }
 }
