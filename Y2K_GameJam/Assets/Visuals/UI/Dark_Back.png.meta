@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: e6ebf7988871fe3a19482f009ac613c7
+guid: a88f380386f8941da9dbc66e99ce28d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -774232377240262218
-    second: head_glasses_black_0
+      213: -2325967781327948089
+    second: Dark_Back_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,8 +51,8 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 700
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 230, y: 230, z: 230, w: 230}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: head_glasses_black_0
+      name: Dark_Back_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 179
-        width: 500
-        height: 141
+        x: 29
+        y: 19
+        width: 442
+        height: 462
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 200, y: 210, z: 200, w: 210}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b9ecf441cf5145f0800000000000000
-      internalID: -774232377240262218
+      spriteID: 7c6b1fa50a088bfd0800000000000000
+      internalID: -2325967781327948089
       vertices: []
       indices: 
       edges: []
@@ -138,8 +138,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    spriteID: 43889c1427983db30adf598d2ebe8a54
+    internalID: 988094340
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      head_glasses_black_0: -774232377240262218
+      Dark_Back_0: -2325967781327948089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

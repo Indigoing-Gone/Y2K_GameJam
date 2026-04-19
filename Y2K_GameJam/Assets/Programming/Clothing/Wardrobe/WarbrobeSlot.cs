@@ -8,6 +8,7 @@ public class WardrobeSlot : MonoBehaviour
     static public event Action<int, ClothingSlot, Unit> OnShiftingWardrobe;
 
     [SerializeField] private ClothingSlot clothingSlot;
+    private List<GameObject> children;
     private Button[] buttons;
     private Unit unit;
 
@@ -23,6 +24,8 @@ public class WardrobeSlot : MonoBehaviour
 
     void Awake()
     {
+        children = new List<GameObject>();
+        foreach (RectTransform child in gameObject.GetComponentsInChildren<RectTransform>()) children.Add(child.gameObject); 
         buttons = GetComponentsInChildren<Button>();
     }
 
@@ -38,7 +41,7 @@ public class WardrobeSlot : MonoBehaviour
 
     private void ActivateWardrobeSlot(EncounterState _state)
     {
-        bool _isActive = (_state != EncounterState.InProgress);
-        foreach (Button _button in buttons) _button.gameObject.SetActive(_isActive);
+        bool _isActive = _state != EncounterState.InProgress;
+        foreach (GameObject child in children) child.SetActive(_isActive);
     }
 }

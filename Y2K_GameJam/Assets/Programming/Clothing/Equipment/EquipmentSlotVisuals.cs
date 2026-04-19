@@ -16,7 +16,7 @@ public class EquipmentSlotVisuals : MonoBehaviour
     void Awake()
     {
         clothingItem = null;
-        clothingRenderer = GetComponent<SpriteRenderer>();
+        clothingRenderer = GetComponentInChildren<SpriteRenderer>();
         stepsText = GetComponentInChildren<TextMeshPro>();
         tooltip = GetComponent<Tooltip>();
 
