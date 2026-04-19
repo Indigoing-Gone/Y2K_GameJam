@@ -10,11 +10,14 @@ public class ShopSlot : MonoBehaviour
     [Header("Shop Slot Info")]
     [SerializeField] private ClothingData clothingData;
     [SerializeField] private GameObject clothingImageObject;
+    
+    private Tooltip tooltip;
     private Image clothingImage;
     private AspectRatioFitter clothingRatio;
 
     void Awake()
     {
+        tooltip = GetComponent<Tooltip>();
         clothingImage = clothingImageObject.GetComponent<Image>();
         clothingRatio = clothingImageObject.GetComponent<AspectRatioFitter>();
     }
@@ -23,21 +26,25 @@ public class ShopSlot : MonoBehaviour
     {
         clothingData = _data;
 
-        if(_data == null)
-        {
-            gameObject.SetActive(false);
-            return;
-        }
-
-        if(_data.Sprite == null)
+        if(_data == null) 
         {
             clothingImage.sprite = null;
             clothingRatio.aspectRatio = 1f;
             return;
         }
-        
-        clothingImage.sprite = _data.Sprite;
-        clothingRatio.aspectRatio = _data.Sprite.bounds.size.x / _data.Sprite.bounds.size.y;
+        else if(_data.Sprite == null)
+        {
+            clothingImage.sprite = null;
+            clothingRatio.aspectRatio = 1f;
+        }
+        else
+        {
+            clothingImage.sprite = _data.Sprite;
+            clothingRatio.aspectRatio = _data.Sprite.bounds.size.x / _data.Sprite.bounds.size.y;
+        }
+
+        tooltip.SetTooltipText(_data.Description);
+        tooltip.SetTooltipPosition(transform.position);
     }
 
     public void SelectShopSlot()

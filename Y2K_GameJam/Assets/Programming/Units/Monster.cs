@@ -12,8 +12,9 @@ public class Monster : Unit
         Width = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         foreach (ClothingData _data in clothingData)
         {
             ClothingItem _item = new(_data);

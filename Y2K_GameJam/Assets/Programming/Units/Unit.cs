@@ -14,6 +14,7 @@ public class Unit : MonoBehaviour
 {
     [Header("Components")]
     [field: SerializeField] public UnitData Data { get; private set; }
+    [SerializeField] private Bar healthBar;
     private Equipment equipment;
     private EquipmentVisuals equipmentVisuals;
 
@@ -21,19 +22,27 @@ public class Unit : MonoBehaviour
     {
         equipment.OnEquipmentChanged += UpdateVisuals;
         Data.OnDeath += HandleDeath;
+        Data.OnHealthChanged += healthBar.UpdateValue;
     }
 
     private void OnDisable()
     {
         equipment.OnEquipmentChanged -= UpdateVisuals;
         Data.OnDeath -= HandleDeath;
+        Data.OnHealthChanged -= healthBar.UpdateValue;
     }
 
     protected virtual void Awake()
     {
         equipment = new Equipment();
         equipmentVisuals = GetComponent<EquipmentVisuals>();
+        healthBar = GetComponentInChildren<Bar>();
+    }
+
+    protected virtual void Start()
+    {
         Data.Init();
+        healthBar.SetMaxValue(Data.MaxHealth);
     }
 
     protected void UpdateVisuals(ClothingSlot _slot, ClothingItem _item)
@@ -62,6 +71,7 @@ public class Unit : MonoBehaviour
 [Serializable]
 public class UnitData
 {
+    public event Action<float> OnHealthChanged;
     public event Action<UnitData> OnDeath;
 
     [field: SerializeField] public string Name { get; private set; }
@@ -78,6 +88,7 @@ public class UnitData
             if(IsDead) return;
 
             health = Mathf.Max(0, Mathf.Min(value, MaxHealth));
+            OnHealthChanged?.Invoke(health);
             if(health == 0)
             {
                 IsDead = true;

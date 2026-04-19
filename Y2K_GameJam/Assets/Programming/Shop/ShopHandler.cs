@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.Overlays;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopHandler : MonoBehaviour
 {
@@ -45,24 +47,24 @@ public class ShopHandler : MonoBehaviour
     public void SetupShop()
     {
         shopPanel.gameObject.SetActive(true);
+        //foreach (ShopSlot _slot in shopSlots) _slot.gameObject.SetActive(true);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(shopPanel);
 
         foreach (ShopSlot _slot in shopSlots)
         {
-            _slot.gameObject.SetActive(true);
-
             if (availableClothingItems.Count == 0)
             {
                 _slot.UpdateData(null);
                 continue;
             }
-
+            
             int _randomIndex = UnityEngine.Random.Range(0, availableClothingItems.Count);
             ClothingData _data = availableClothingItems[_randomIndex];
             availableClothingItems.RemoveAt(_randomIndex);
 
             _slot.UpdateData(_data);
         }
-
+        
         currentSelections = allowedSelections;
     }
 
