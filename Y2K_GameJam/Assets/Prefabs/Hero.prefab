@@ -60,7 +60,8 @@ MonoBehaviour:
     <TempAttackMultiplier>k__BackingField: 0
     defenseMultiplier: 1
     tempDefenseMultiplier: 0
-  healthBar: {fileID: 0}
+  attackMultiplierDataText: {fileID: 5295312106003634484}
+  defenseMultiplierDataText: {fileID: 5882991202318837358}
 --- !u!114 &2918301677695161094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,3 +784,25 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6038070731320021044, guid: 61f596ad77e729b4c8ce7969f0f099ab, type: 3}
   m_PrefabInstance: {fileID: 5745177476885920442}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5295312106003634484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 488150401333339022, guid: 61f596ad77e729b4c8ce7969f0f099ab, type: 3}
+  m_PrefabInstance: {fileID: 5745177476885920442}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e0a5205165fb8ef947274917e41a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DataText
+--- !u!114 &5882991202318837358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2170292114366815444, guid: 61f596ad77e729b4c8ce7969f0f099ab, type: 3}
+  m_PrefabInstance: {fileID: 5745177476885920442}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e0a5205165fb8ef947274917e41a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DataText
