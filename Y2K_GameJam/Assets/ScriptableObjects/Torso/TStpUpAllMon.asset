@@ -28,5 +28,5 @@ MonoBehaviour:
       data:
         targetType: 2
         targetPosition: 2
-        TargetSlot: 0
+        TargetSlot: 5
         stepModification: 3
